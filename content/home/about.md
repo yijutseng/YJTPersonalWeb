@@ -32,4 +32,4 @@ weight = 1
 
 # Biography
 
-Yi-Ju Tseng is an assistant professor at Chang Gung University with extensive experience in claims data and electronic medical records analysis and data mining analytics. Her work focuses on improving infection surveillance by using informatics techniques and applying data mining technology to clinical research.
+Yi-Ju Tseng is an assistant professor at Chang Gung University [Digital Health Lab](https://dhlab-cgu.github.io/) with extensive experience in claims data and electronic medical records analysis and data mining analytics. Her work focuses on improving infection surveillance by using informatics techniques and applying data mining technology to clinical research.
