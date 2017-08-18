@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "+++\n# About/Biography widget.\n\ndate = \"2017-08-18T00:00:00\"\ndraft = false\n\nwidget = \"about\"\n\n# Order that this section will appear in.\nweight = 1\n\n# List your academic interests.\n[interests]\n  interests = [\n    \"Medical Informatics\",\n    \"Data Mining\",\n    \"Clinical Decision Support\"\n  ]\n\n# List your qualifications (such as academic degrees).\n[[education.courses]]\n  course = \"PhD in Biomedical Electronics and Bioinformatics\"\n  institution = \"National Taiwan University\"\n  year = 2013\n\n[[education.courses]]\n  course = \"BSc in Clinical Laboratory Sciences and Medical Biotechnology\"\n  institution = \"National Taiwan University\"\n  year = 2008\n \n+++\n\n# Biography\n\nYi-Ju Tseng is an assistant professor at Chang Gung University with extensive experience in claims data and electronic medical records analysis and data mining analytics. Her work focuses on improving infection surveillance by using informatics techniques and applying data mining technology to clinical research.\n",
+    "created" : 1503023576948.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1783615135",
+    "id" : "4ABA1DE4",
+    "lastKnownWriteTime" : 1503023595,
+    "last_content_update" : 1503023595783,
+    "path" : "~/GitHub/YJTBlog/content/home/about.md",
+    "project_path" : "content/home/about.md",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}

@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "+++\nabstract = \"**Objective** The ADA recommends metformin as first-line therapy for Type 2 diabetes mellitus (DM). However, nonadherence to antihyperglycemic medication is common and a clinician could confuse nonadherence with pharmacologic failure, potentially leading to premature prescribing of second line therapies. We sought to measure metformin use prior to second-line therapy initialization. **Research Design and Methods** A retrospective cross-sectional study using un-identifiable member claims data from individuals covered from 2010-2015 by Aetna, a U.S. health benefits company. Beneficiaries with 2 physician claims or one hospitalization with Type 2 DM diagnoses were included. Recommended use of metformin was measured by the proportion of days covered over 60-days. Sensitivity analysis varied estimates of the percentage of beneficiaries using low-cost generic prescription medication programs. **Results** 52,544 individuals had diabetes. Of 22,956 patients given second-line treatment, only 1,875 (8.2%) had evidence of recommended use of metformin in the prior 60 days, and 6,441 (28.0%)  had no prior claims evidence of having taken metformin. At the top range of sensitivity up to only 49.5% patients could have had recommended use. Patients were more likely to be given an additional second-line antihyperglycemic medication or insulin if they were given their initial second-line medication without evidence of recommended use of metformin (P<0.001). **Conclusion** Despite published guidelines, second-line therapy is often initiated without evidence of recommended use of first-line therapy. Apparent treatment failures, which may in fact be attributable to non-adherence to guidelines are common. Point of care and population-level processes are needed to monitor and improve guideline adherence.\"\nabstract_short = \"Despite published guidelines, second-line therapy is often initiated without evidence of recommended use of first-line therapy. Apparent treatment failures, which may in fact be attributable to non-adherence to guidelines are common. Point of care and population-level processes are needed to monitor and improve guideline adherence.\"\nauthors = [\"Tseng YJ\", \"Steinberg G\", \"Fox KP\", \"Armstrong J\", \"Mandl KD\"]\ndate = \"2017-08-18\"\nimage_preview = \"\"\nmath = true\npublication_types = [\"2\"]\npublication = \"In *Diabetes Care*.\"\npublication_short = \"\"\nselected = true\ntitle = \"Antihyperglycemic Medications: A Claims-based Estimate of First-line Therapy Use Prior to Initialization of Second-line Medications\"\nurl_code = \"\"\nurl_dataset = \"\"\nurl_pdf = \"\"\nurl_project = \"\"\nurl_slides = \"\"\nurl_video = \"\"\n\n+++\n",
+    "created" : 1503024686293.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "56946844",
+    "id" : "919FD9B9",
+    "lastKnownWriteTime" : 1503025532,
+    "last_content_update" : 1503025532689,
+    "path" : "~/GitHub/YJTBlog/content/publication/metformin-use.md",
+    "project_path" : "content/publication/metformin-use.md",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}
