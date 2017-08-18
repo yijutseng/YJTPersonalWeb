@@ -1,4 +1,4 @@
-baseurl = "http://yjtseng.netlify.com/"  # End your URL with a `/` trailing slash.
+baseurl = "https://yjtseng.info/"  # End your URL with a `/` trailing slash.
 title = "Yi-Ju Tseng @ CGU"
 copyright = "&copy; 2017 Yi-Ju Tseng"
 theme = "hugo-academic"
@@ -140,7 +140,7 @@ defaultContentLanguageInSubdir = false
     icon_pack = "ai"
     link = "https://www.researchgate.net/profile/Yi_Ju_Tseng"
     
-[[params.social]]
+    [[params.social]]
     icon = "orcid"
     icon_pack = "ai"
     link = "http://orcid.org/0000-0002-1814-5553"
