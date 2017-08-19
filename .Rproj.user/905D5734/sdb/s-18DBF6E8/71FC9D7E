@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "{{ partial \"header.html\" . }}\n{{ partial \"navbar.html\" . }}\n\n<!-- Flag for jQuery -->\n<span id=\"homepage\" style=\"display: none\"></span>\n\n<!-- Widgets -->\n{{ range $index, $page := where .Data.Pages \"Type\" \"home\" }}\n  {{ $params := dict \"root\" $ \"page\" $page }}\n  {{ $widget := printf \"widgets/%s.html\" ( or $page.Params.widget \"custom\" ) }}\n  <section id=\"{{ $page.File.TranslationBaseName }}\" class=\"home-section\">\n    <div class=\"container\">\n      {{ partial $widget $params }}\n    </div>\n  </section>\n{{ end }}\n\n<!-- Page Footer -->\n{{ partial \"footer_container.html\" . }}\n{{ partial \"footer.html\" . }}\n",
+    "created" : 1503126021587.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "688122806",
+    "id" : "71FC9D7E",
+    "lastKnownWriteTime" : 1503019685,
+    "last_content_update" : 1503019685,
+    "path" : "~/GitHub/YJTPersonalWeb/themes/hugo-academic/layouts/index.html",
+    "project_path" : "themes/hugo-academic/layouts/index.html",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "html"
+}

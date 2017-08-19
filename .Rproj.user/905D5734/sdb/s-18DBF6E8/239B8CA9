@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "<div class=\"pub-list-item\" itemscope itemtype=\"http://schema.org/CreativeWork\">\n  <div class=\"row\">\n\n    {{ if .Params.image_preview }}\n\n    <div class=\"col-md-12\">\n      <a href=\"{{ .Permalink }}\">\n        <img src=\"{{ \"/img/\" | relURL }}{{ .Params.image_preview }}\" class=\"pub-banner\"\n             itemprop=\"image\">\n      </a>\n    </div>\n    <div class=\"col-md-12\">\n\n    {{ else if .Params.header.image}}\n\n    <div class=\"col-md-12\">\n      <a href=\"{{ .Permalink }}\">\n        <img src=\"{{ \"/img/\" | relURL }}{{ .Params.header.image }}\" class=\"pub-banner\" itemprop=\"image\">\n      </a>\n    </div>\n    <div class=\"col-md-12\">\n\n    {{ else }}\n\n    <div class=\"col-md-12\">\n\n    {{ end }}\n\n      <h4 class=\"article-title\" itemprop=\"name\">\n        <a href=\"{{ .Permalink }}\" itemprop=\"url\">{{ .Title }}</a>\n      </h4>\n\n      <div class=\"pub-abstract\" itemprop=\"text\">\n        {{ if .Params.abstract_short }}\n        {{ .Params.abstract_short | markdownify }}\n        {{ else }}\n        {{ .Params.abstract | markdownify}}\n        {{ end }}\n      </div>\n\n      <div class=\"pub-authors\" itemprop=\"author\">\n        {{ with .Params.authors }}\n        {{ delimit . \", \" | markdownify }}\n        {{ end }}\n      </div>\n\n      <div class=\"pub-publication\">\n        {{ if .Params.publication_short }}\n        {{ .Params.publication_short | markdownify }}\n        {{ else }}\n        {{ .Params.publication | markdownify }}\n        {{ end }}\n      </div>\n\n      <div class=\"pub-links\">\n        {{ partial \"publication_links\" (dict \"content\" . \"is_list\" 1) }}\n      </div>\n\n    </div>\n  </div>\n</div>\n",
+    "created" : 1503126134403.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3510741372",
+    "id" : "239B8CA9",
+    "lastKnownWriteTime" : 1503126176,
+    "last_content_update" : 1503126176645,
+    "path" : "~/GitHub/YJTPersonalWeb/themes/hugo-academic/layouts/partials/publication_li_detailed.html",
+    "project_path" : "themes/hugo-academic/layouts/partials/publication_li_detailed.html",
+    "properties" : {
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "html"
+}
