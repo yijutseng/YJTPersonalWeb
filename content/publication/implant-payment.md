@@ -2,7 +2,7 @@
 abstract = "The total payments insurance companies pay for knee and hip implants were twice as high as the average selling prices at which hospitals purchased the implants from manufacturers, resulting in hundreds of millions of dollars of additional insurance claims."
 authors = ["Tseng YJ", "Mandl KD"]
 date = "2017-02-28"
-image_preview = ""
+image_preview = "Implant.jpg"
 math = true
 publication_types = ["2"]
 publication = "In *JAMA*."
@@ -28,8 +28,8 @@ url = "https://www.statnews.com/2017/02/28/insurers-orthopedic-implants/"
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
-image = ""
-caption = "My caption :smile:"
+#image = "Implant.jpg"
+#caption = "My caption :smile:"
 
 +++
 
