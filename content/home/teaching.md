@@ -13,10 +13,14 @@ widget = "custom"
 weight = 60
 
 +++
+- Undergraduated Level
+    - 物件導向程式設計 Object-Oriented Programming, Fall
+    - 大數據分析方法 Big Data Analytical Methods, Spring
 
-- 物件導向程式設計 Object-Oriented Programming, Fall
-- 大數據分析方法 Big Data Analytical Methods, Spring
-- 醫學資訊 Medical Informatics, Spring 
-- 巨量資料產業實務個案 Big Data Practices in Industries, Spring 
+- Graduated Level
+    - 醫學資訊 Medical Informatics, Fall 
+    
+- EMBA
+    - 巨量資料產業實務個案 Big Data Practices in Industries, Spring 
 
 For more infomation, please visit [Digital Health Lab](https://dhlab-cgu.github.io/#course)
