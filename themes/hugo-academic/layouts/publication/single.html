@@ -5,7 +5,7 @@
   {{ partial "header_image.html" . }}
 
   <div class="container pub-title">
-    <h4 itemprop="name">{{ .Title }}</h4>
+    <h2 itemprop="name">{{ .Title }}</h2>
     <span class="pub-authors" itemprop="author">
       {{ with .Params.authors }}
       {{ delimit . ", " | markdownify }}
