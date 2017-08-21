@@ -34,7 +34,7 @@ view = 1
   tag = ".data-mining"
 
 [[filter]]
-  name = "Other"
+  name = "Others"
   tag = ".demo"
 
 +++
