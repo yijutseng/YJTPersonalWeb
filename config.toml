@@ -140,10 +140,6 @@ defaultContentLanguageInSubdir = false
     icon_pack = "ai"
     link = "https://www.researchgate.net/profile/Yi_Ju_Tseng"
     
-    [[params.social]]
-    icon = "orcid"
-    icon_pack = "ai"
-    link = "http://orcid.org/0000-0002-1814-5553"
 
   [[params.social]]
     icon = "github"
