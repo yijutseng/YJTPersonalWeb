@@ -18,6 +18,11 @@ weight = 1
   ]
 
 # List your qualifications (such as academic degrees).
+[[interests.works]]
+  course = "Postdoctoral Research Fellow"
+  institution = "Boston Children's Hospital / Harvard Medical School"
+  year = 2016
+
 [[education.courses]]
   course = "PhD in Biomedical Electronics and Bioinformatics"
   institution = "National Taiwan University"

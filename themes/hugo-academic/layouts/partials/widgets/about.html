@@ -48,19 +48,34 @@
     <div class="row">
 
       {{ with $page.Params.interests }}
-      <div class="col-sm-5">
+      <div class="col-sm-6">
+          <h3>Experience</h3>
+          <ul class="ul-edu fa-ul">
+            {{ range .works }}
+            <li>
+              <i class="fa-li fa fa-briefcase"></i>
+              <div class="description">
+                <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
+                <p class="institution">{{ .institution }}</p>
+              </div>
+            </li>
+            {{ end }}
+          </ul>
         <h3>{{ i18n "interests" | markdownify }}</h3>
         <ul class="ul-interests">
           {{ range .interests }}
           <li>{{ . }}</li>
           {{ end }}
         </ul>
+        
       </div>
       {{ end }}
 
       {{ with $page.Params.education }}
-      <div class="col-sm-7">
+      <div class="col-sm-6">
         <h3>{{ i18n "education" | markdownify }}</h3>
+        
+
         <ul class="ul-edu fa-ul">
           {{ range .courses }}
           <li>
@@ -72,6 +87,7 @@
           </li>
           {{ end }}
         </ul>
+        
       </div>
       {{ end }}
 
