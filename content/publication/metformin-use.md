@@ -18,4 +18,7 @@ url_project = ""
 url_slides = ""
 url_video = ""
 
+[[url_custom]]
+name = "Covered in Vector"
+url = "https://vector.childrenshospital.org/2017/09/type-2-diabetes-medication-adherence/"
 +++
