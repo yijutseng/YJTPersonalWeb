@@ -34,6 +34,10 @@ view = 1
   tag = ".data-mining"
 
 [[filter]]
+  name = "Laboratory"
+  tag = ".Laboratory"
+
+[[filter]]
   name = "Others"
   tag = ".demo"
 
