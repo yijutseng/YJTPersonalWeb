@@ -1,0 +1,47 @@
++++
+# Date this page was created.
+date = "2017-10-01"
+
+# Project title.
+title = "以機器學習演算法分析檢驗數值以偵測尿液中微生物-以陰道滴蟲為例"
+
+# Project summary to display on homepage.
+summary = "使用尿液檢驗與電子病歷資料，搭配三種機器學習演算法，邏輯迴歸、支持向量機，以及隨機森林法，找出最適合做陰道滴蟲檢體篩檢的機器學習模型。"
+
+# Optional image to display on homepage (relative to `static/img/` folder).
+#image_preview = "bubbles.jpg"
+
+# Tags: can be used for filtering projects.
+# Example: `tags = ["machine-learning", "deep-learning"]`
+tags = ["ehr","data-mining","Laboratory"]
+
+# Optional external URL for project (replaces project detail page).
+external_link = ""
+
+# Does the project detail page use math formatting?
+math = false
+
+# Optional featured image (relative to `static/img/` folder).
+[header]
+#image = "headers/bubbles-wide.jpg"
+#caption = "My caption :smile:"
+
++++
+
+### 補助單位
+
+長庚醫院
+
+### 執行期間
+
+2017/10/01 - 2018/09/30
+
+### 計畫摘要
+
+陰道滴蟲感染是全世界最盛行的非病毒性經性行為傳染的疾病之一，研究指出，有三分之二的感染者未被診斷或未接受治療，而未診斷與未治療的陰道滴蟲感染會造成更嚴重的疾病，為公共衛生不可忽視的問題。尿沉渣顯微鏡檢查為現今臨床上最常被使用的陰道滴蟲篩檢法，傳統的鏡檢屬勞力密集的檢查方法，因此，高檢體量的實驗室已引入尿沉渣自動檢驗儀器。
+
+然而，自動檢驗儀器仍無法檢測陰道滴蟲，導致陰道滴蟲檢出率顯著下滑，影響陰道滴蟲的篩檢量能。本計畫提出基於機器學習方法的陰道滴蟲篩檢策略，藉由機器學習方法的協助，在大量的尿液檢體中篩選出風險檢體，做進一步的顯微鏡檢查，提高陰道滴蟲的檢出率。
+
+本計畫預計使用2009至2013年長庚紀念醫院林口院區尿液檢驗與電子病歷資料，將做過至少一次尿液檢查的患者資料取出，搭配三種機器學習演算法，邏輯迴歸、支持向量機，以及隨機森林法，找出最適合做陰道滴蟲檢體篩檢的機器學習模型。
+
+模型的效能指標為ROC曲線下面積以及升降預測值，為了系統化的檢測模型篩檢數量以及陰道滴蟲檢出敏感度的關係，我們預計引入成本效果閾值的概念來檢測本篩檢策略的使用效益。藉由機器學習方法的協助，希望陰道滴蟲的檢出率可有效提升。

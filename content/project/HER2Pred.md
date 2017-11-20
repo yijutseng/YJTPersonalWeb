@@ -13,7 +13,7 @@ summary = "建立乳癌預後預測模型。乳癌預後預測標的為一年內
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["ehr","data-mining","breast-cancer"]
+tags = ["ehr","data-mining","breast-cancer","Laboratory"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
