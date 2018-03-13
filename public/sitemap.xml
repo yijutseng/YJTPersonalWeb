@@ -5,6 +5,33 @@
     
     <url>
     
+      <loc>/publication/Rehab/</loc>
+      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/project/EHRPheno/</loc>
+      <lastmod>2018-02-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/project/TrichoPred/</loc>
+      <lastmod>2017-10-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/publication/metformin-use/</loc>
       <lastmod>2017-08-18T00:00:00+00:00</lastmod>
     </url>
@@ -159,7 +186,7 @@
     <url>
     
       <loc>/publication_types/2/</loc>
-      <lastmod>2017-08-18T00:00:00+00:00</lastmod>
+      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -169,7 +196,7 @@
     <url>
     
       <loc>/tags/big-data/</loc>
-      <lastmod>2017-08-01T00:00:00+00:00</lastmod>
+      <lastmod>2018-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -189,7 +216,7 @@
     <url>
     
       <loc>/tags/data-mining/</loc>
-      <lastmod>2017-08-01T00:00:00+00:00</lastmod>
+      <lastmod>2018-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -199,7 +226,7 @@
     <url>
     
       <loc>/tags/ehr/</loc>
-      <lastmod>2017-08-01T00:00:00+00:00</lastmod>
+      <lastmod>2018-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -221,8 +248,18 @@
     
     <url>
     
+      <loc>/tags/laboratory/</loc>
+      <lastmod>2017-10-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/project/</loc>
-      <lastmod>2017-08-01T00:00:00+00:00</lastmod>
+      <lastmod>2018-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

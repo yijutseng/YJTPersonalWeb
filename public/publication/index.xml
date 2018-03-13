@@ -11,7 +11,16 @@
     <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Antihyperglycemic Medications: A Claims-based Estimate of First-line Therapy Use Prior to Initialization of Second-line Medications</title>
+      <title>Predicting post-stroke activities of daily living through a machine learning- based approach on initiating rehabilitation</title>
+      <link>/publication/Rehab/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/Rehab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Antihyperglycemic Medications: A Claims-Based Estimate of First-Line Therapy Use Before Initialization of Second-Line Medications</title>
       <link>/publication/metformin-use/</link>
       <pubDate>Fri, 18 Aug 2017 00:00:00 +0000</pubDate>
       
