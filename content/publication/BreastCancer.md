@@ -5,7 +5,7 @@ abstract_short = "Breast cancer metastasis cannot be detected solely on the basi
 
 authors = ["Tseng YJ", "Huang CE", "Wen CN", "Lai PY", "Wu MH", "Sun YC", "Wang HY", "Lu JJ"]
 date = "2019-05-10"
-image_preview = "https://ars.els-cdn.com/content/image/1-s2.0-S1386505618311213-gr1.jpg"
+image_preview = "BR.jpg"
 math = true
 publication_types = ["2"]
 publication = "In *International Journal of Medical Informatics*."

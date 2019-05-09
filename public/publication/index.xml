@@ -2,20 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Yi-Ju Tseng @ CGU</title>
-    <link>/publication/index.xml</link>
+    <link>/publication/</link>
     <description>Recent content in Publications on Yi-Ju Tseng @ CGU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Yi-Ju Tseng</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Predicting breast cancer metastasis by using serum biomarkers and clinicopathological data with machine learning technologies</title>
+      <link>/publication/breastcancer/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/breastcancer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rapid Detection of Heterogeneous Vancomycin-Intermediate Staphylococcus aureus Based on Matrix-Assisted Laser Desorption Ionization Time-of-Flight: Using a Machine Learning Approach and Unbiased Validation</title>
+      <link>/publication/visa/</link>
+      <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/visa/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Predicting post-stroke activities of daily living through a machine learning- based approach on initiating rehabilitation</title>
-      <link>/publication/Rehab/</link>
+      <link>/publication/rehab/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/Rehab/</guid>
+      <guid>/publication/rehab/</guid>
       <description></description>
     </item>
     
@@ -39,55 +59,55 @@
     
     <item>
       <title>Claims-Based Diagnostic Patterns of Patients Evaluated for Lyme Disease and Given Extended Antibiotic Therapy</title>
-      <link>/publication/LymeDJ/</link>
+      <link>/publication/lymedj/</link>
       <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/LymeDJ/</guid>
+      <guid>/publication/lymedj/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Incidence and Patterns of Extended-Course Antibiotic Therapy in Patients Evaluated for Lyme Disease</title>
-      <link>/publication/LymeAnti/</link>
+      <link>/publication/lymeanti/</link>
       <pubDate>Wed, 18 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>/publication/LymeAnti/</guid>
+      <guid>/publication/lymeanti/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Development and Evaluation of a Web-Based, Hospital-Wide Healthcare-Associated Bloodstream Infection Surveillance and Classification System</title>
-      <link>/publication/HABSI/</link>
+      <link>/publication/habsi/</link>
       <pubDate>Fri, 18 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>/publication/HABSI/</guid>
+      <guid>/publication/habsi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Using Nation-Wide Health Insurance Claims Data to Augment Lyme Disease Surveillance</title>
-      <link>/publication/LymeIncidence/</link>
+      <link>/publication/lymeincidence/</link>
       <pubDate>Fri, 18 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>/publication/LymeIncidence/</guid>
+      <guid>/publication/lymeincidence/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Multiple-Time-Series Clinical Data Processing for Classification With Merging Algorithm and Statistical Measures</title>
-      <link>/publication/MMSVM/</link>
+      <link>/publication/mmsvm/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>/publication/MMSVM/</guid>
+      <guid>/publication/mmsvm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Web-Based Multidrug-Resistant Organisms Surveillance and Outbreak Detection System with Rule-Based Classification and Clustering</title>
-      <link>/publication/MDRO/</link>
+      <link>/publication/mdro/</link>
       <pubDate>Sat, 01 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>/publication/MDRO/</guid>
+      <guid>/publication/mdro/</guid>
       <description></description>
     </item>
     

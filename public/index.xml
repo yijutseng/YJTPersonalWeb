@@ -2,29 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yi-Ju Tseng @ CGU on Yi-Ju Tseng @ CGU</title>
-    <link>/index.xml</link>
+    <link>/</link>
     <description>Recent content in Yi-Ju Tseng @ CGU on Yi-Ju Tseng @ CGU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Yi-Ju Tseng</copyright>
     <lastBuildDate>Fri, 18 Aug 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Predicting breast cancer metastasis by using serum biomarkers and clinicopathological data with machine learning technologies</title>
+      <link>/publication/breastcancer/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/breastcancer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rapid Detection of Heterogeneous Vancomycin-Intermediate Staphylococcus aureus Based on Matrix-Assisted Laser Desorption Ionization Time-of-Flight: Using a Machine Learning Approach and Unbiased Validation</title>
+      <link>/publication/visa/</link>
+      <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/visa/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Predicting post-stroke activities of daily living through a machine learning- based approach on initiating rehabilitation</title>
-      <link>/publication/Rehab/</link>
+      <link>/publication/rehab/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/Rehab/</guid>
+      <guid>/publication/rehab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>探索病歷表現型– 發展醫療大數據中的疾病發展歷程探勘方法與模組</title>
-      <link>/project/EHRPheno/</link>
+      <link>/project/ehrpheno/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/project/EHRPheno/</guid>
+      <guid>/project/ehrpheno/</guid>
       <description>
 
 &lt;h3 id=&#34;補助單位&#34;&gt;補助單位&lt;/h3&gt;
@@ -45,10 +63,10 @@
     
     <item>
       <title>以機器學習演算法分析檢驗數值以偵測尿液中微生物-以陰道滴蟲為例</title>
-      <link>/project/TrichoPred/</link>
+      <link>/project/trichopred/</link>
       <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/project/TrichoPred/</guid>
+      <guid>/project/trichopred/</guid>
       <description>
 
 &lt;h3 id=&#34;補助單位&#34;&gt;補助單位&lt;/h3&gt;
@@ -82,19 +100,19 @@
     
     <item>
       <title>R資料分析三部曲 Trilogy of Data Analysis with R - Data Visualization</title>
-      <link>/talk/20170807R3/</link>
+      <link>/talk/20170807r3/</link>
       <pubDate>Mon, 07 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/talk/20170807R3/</guid>
+      <guid>/talk/20170807r3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>使用電子病歷預測傳染病流行趨勢－以流行性感冒與流感併發重症為例</title>
-      <link>/project/EHRInfPred/</link>
+      <link>/project/ehrinfpred/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/project/EHRInfPred/</guid>
+      <guid>/project/ehrinfpred/</guid>
       <description>
 
 &lt;h3 id=&#34;補助單位&#34;&gt;補助單位&lt;/h3&gt;
@@ -113,19 +131,19 @@
     
     <item>
       <title>R資料分析三部曲 Trilogy of Data Analysis with R - EDA</title>
-      <link>/talk/20170731R2/</link>
+      <link>/talk/20170731r2/</link>
       <pubDate>Mon, 31 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/talk/20170731R2/</guid>
+      <guid>/talk/20170731r2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R資料分析三部曲 Trilogy of Data Analysis with R - 101</title>
-      <link>/talk/20170724R1/</link>
+      <link>/talk/20170724r1/</link>
       <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/talk/20170724R1/</guid>
+      <guid>/talk/20170724r1/</guid>
       <description></description>
     </item>
     
@@ -140,19 +158,19 @@
     
     <item>
       <title>Claims-Based Diagnostic Patterns of Patients Evaluated for Lyme Disease and Given Extended Antibiotic Therapy</title>
-      <link>/publication/LymeDJ/</link>
+      <link>/publication/lymedj/</link>
       <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/LymeDJ/</guid>
+      <guid>/publication/lymedj/</guid>
       <description></description>
     </item>
     
     <item>
       <title>應用機器學習方法進行多臨床參數分析以建立癌症預後預測之模型</title>
-      <link>/project/HER2Pred/</link>
+      <link>/project/her2pred/</link>
       <pubDate>Sat, 01 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/project/HER2Pred/</guid>
+      <guid>/project/her2pred/</guid>
       <description>
 
 &lt;h3 id=&#34;補助單位&#34;&gt;補助單位&lt;/h3&gt;
@@ -171,10 +189,10 @@
     
     <item>
       <title>以整合型健康照護資料評估傳染病盛行情形</title>
-      <link>/project/EHRInf/</link>
+      <link>/project/ehrinf/</link>
       <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>/project/EHRInf/</guid>
+      <guid>/project/ehrinf/</guid>
       <description>
 
 &lt;h3 id=&#34;補助單位&#34;&gt;補助單位&lt;/h3&gt;
@@ -197,28 +215,10 @@
     
     <item>
       <title>Incidence and Patterns of Extended-Course Antibiotic Therapy in Patients Evaluated for Lyme Disease</title>
-      <link>/publication/LymeAnti/</link>
+      <link>/publication/lymeanti/</link>
       <pubDate>Wed, 18 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>/publication/LymeAnti/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Development and Evaluation of a Web-Based, Hospital-Wide Healthcare-Associated Bloodstream Infection Surveillance and Classification System</title>
-      <link>/publication/HABSI/</link>
-      <pubDate>Fri, 18 Sep 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/HABSI/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Using Nation-Wide Health Insurance Claims Data to Augment Lyme Disease Surveillance</title>
-      <link>/publication/LymeIncidence/</link>
-      <pubDate>Fri, 18 Sep 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/LymeIncidence/</guid>
+      <guid>/publication/lymeanti/</guid>
       <description></description>
     </item>
     

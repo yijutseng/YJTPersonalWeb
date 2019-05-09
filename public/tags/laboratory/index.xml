@@ -2,61 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Laboratory on Yi-Ju Tseng @ CGU</title>
-    <link>/tags/laboratory/index.xml</link>
+    <link>/tags/laboratory/</link>
     <description>Recent content in Laboratory on Yi-Ju Tseng @ CGU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Yi-Ju Tseng</copyright>
-    <atom:link href="/tags/laboratory/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/laboratory/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>以機器學習演算法分析檢驗數值以偵測尿液中微生物-以陰道滴蟲為例</title>
-      <link>/project/TrichoPred/</link>
+      <link>/project/trichopred/</link>
       <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/project/TrichoPred/</guid>
-      <description>
-
-&lt;h3 id=&#34;補助單位&#34;&gt;補助單位&lt;/h3&gt;
-
-&lt;p&gt;長庚醫院&lt;/p&gt;
-
-&lt;h3 id=&#34;執行期間&#34;&gt;執行期間&lt;/h3&gt;
-
-&lt;p&gt;2017/10/01 - 2018/09/30&lt;/p&gt;
-
-&lt;h3 id=&#34;計畫摘要&#34;&gt;計畫摘要&lt;/h3&gt;
-
-&lt;p&gt;陰道滴蟲感染是全世界最盛行的非病毒性經性行為傳染的疾病之一，研究指出，有三分之二的感染者未被診斷或未接受治療，而未診斷與未治療的陰道滴蟲感染會造成更嚴重的疾病，為公共衛生不可忽視的問題。尿沉渣顯微鏡檢查為現今臨床上最常被使用的陰道滴蟲篩檢法，傳統的鏡檢屬勞力密集的檢查方法，因此，高檢體量的實驗室已引入尿沉渣自動檢驗儀器。&lt;/p&gt;
-
-&lt;p&gt;然而，自動檢驗儀器仍無法檢測陰道滴蟲，導致陰道滴蟲檢出率顯著下滑，影響陰道滴蟲的篩檢量能。本計畫提出基於機器學習方法的陰道滴蟲篩檢策略，藉由機器學習方法的協助，在大量的尿液檢體中篩選出風險檢體，做進一步的顯微鏡檢查，提高陰道滴蟲的檢出率。&lt;/p&gt;
-
-&lt;p&gt;本計畫預計使用2009至2013年長庚紀念醫院林口院區尿液檢驗與電子病歷資料，將做過至少一次尿液檢查的患者資料取出，搭配三種機器學習演算法，邏輯迴歸、支持向量機，以及隨機森林法，找出最適合做陰道滴蟲檢體篩檢的機器學習模型。&lt;/p&gt;
-
-&lt;p&gt;模型的效能指標為ROC曲線下面積以及升降預測值，為了系統化的檢測模型篩檢數量以及陰道滴蟲檢出敏感度的關係，我們預計引入成本效果閾值的概念來檢測本篩檢策略的使用效益。藉由機器學習方法的協助，希望陰道滴蟲的檢出率可有效提升。&lt;/p&gt;
-</description>
+      <guid>/project/trichopred/</guid>
+      <description>補助單位 長庚醫院
+執行期間 2017/10/01 - 2018/09/30
+計畫摘要 陰道滴蟲感染是全世界最盛行的非病毒性經性行為傳染的疾病之一，研究指出，有三分之二的感染者未被診斷或未接受治療，而未診斷與未治療的陰道滴蟲感染會造成更嚴重的疾病，為公共衛生不可忽視的問題。尿沉渣顯微鏡檢查為現今臨床上最常被使用的陰道滴蟲篩檢法，傳統的鏡檢屬勞力密集的檢查方法，因此，高檢體量的實驗室已引入尿沉渣自動檢驗儀器。
+然而，自動檢驗儀器仍無法檢測陰道滴蟲，導致陰道滴蟲檢出率顯著下滑，影響陰道滴蟲的篩檢量能。本計畫提出基於機器學習方法的陰道滴蟲篩檢策略，藉由機器學習方法的協助，在大量的尿液檢體中篩選出風險檢體，做進一步的顯微鏡檢查，提高陰道滴蟲的檢出率。
+本計畫預計使用2009至2013年長庚紀念醫院林口院區尿液檢驗與電子病歷資料，將做過至少一次尿液檢查的患者資料取出，搭配三種機器學習演算法，邏輯迴歸、支持向量機，以及隨機森林法，找出最適合做陰道滴蟲檢體篩檢的機器學習模型。
+模型的效能指標為ROC曲線下面積以及升降預測值，為了系統化的檢測模型篩檢數量以及陰道滴蟲檢出敏感度的關係，我們預計引入成本效果閾值的概念來檢測本篩檢策略的使用效益。藉由機器學習方法的協助，希望陰道滴蟲的檢出率可有效提升。</description>
     </item>
     
     <item>
       <title>應用機器學習方法進行多臨床參數分析以建立癌症預後預測之模型</title>
-      <link>/project/HER2Pred/</link>
+      <link>/project/her2pred/</link>
       <pubDate>Sat, 01 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/project/HER2Pred/</guid>
-      <description>
-
-&lt;h3 id=&#34;補助單位&#34;&gt;補助單位&lt;/h3&gt;
-
-&lt;p&gt;長庚醫院&lt;/p&gt;
-
-&lt;h3 id=&#34;執行期間&#34;&gt;執行期間&lt;/h3&gt;
-
-&lt;p&gt;2016/10/01 - 2017/09/30&lt;/p&gt;
-
-&lt;h3 id=&#34;計畫摘要&#34;&gt;計畫摘要&lt;/h3&gt;
-
-&lt;p&gt;基於乳癌細胞所呈現的雌性激素受體 (estrogen receptor, ER)、孕激素受體 (progesterone receptor, PR) 與第二型人類表皮生長因子接受體 (human epidermal growth factor 2 (HER2) receptor)，乳癌可被分為多種亞型，並做為治療與預後的依據。研究指出，HER2在約20-25%的乳癌患者中過度表現，而HER2過度表現的患者容易癌細胞轉移與乳癌復發，存活期較短，且治療效果也較差。為了即時檢測第二型人類表皮生長因子的表現，目前多使用血清第二型人類表皮生長因子 (serum HER2 (sHER2) level)，文獻指出，在乳癌復發前，可測得較高的單一sHER2測量值。然而，使用單一sHER2測量值預測乳癌預後仍有其限制，除了設定單一閾值所造成的低敏感度外，單一測量值也無法表示病程與臨床表徵的連續變化，其他與乳癌復發預測有關的因子，如TNM tumor stage、雌性激素受體與孕激素受體等數值也無法一併分析。本計畫預計使用機器學習演算法，搭配多重測量值 (multiple measurements) 資料整合演算法，使用2002至2016年間在長庚紀念醫院林口院區與台北院區接受乳癌治療的病患資料，包括腫瘤相關資料 (TNM tumor stage、雌性激素受體表現、孕激素受體表現與第二型人類表皮生長因子接受體表現) 以及連續性的sHER2測量值，建立乳癌預後預測模型。乳癌預後預測標的為一年內再復發情形。此預測模型將可幫助乳癌案例的介入追蹤決策，進一步達到早期診斷，早期治療以及改善治療成效的目的。&lt;/p&gt;
-</description>
+      <guid>/project/her2pred/</guid>
+      <description>補助單位 長庚醫院
+執行期間 2016/10/01 - 2017/09/30
+計畫摘要 基於乳癌細胞所呈現的雌性激素受體 (estrogen receptor, ER)、孕激素受體 (progesterone receptor, PR) 與第二型人類表皮生長因子接受體 (human epidermal growth factor 2 (HER2) receptor)，乳癌可被分為多種亞型，並做為治療與預後的依據。研究指出，HER2在約20-25%的乳癌患者中過度表現，而HER2過度表現的患者容易癌細胞轉移與乳癌復發，存活期較短，且治療效果也較差。為了即時檢測第二型人類表皮生長因子的表現，目前多使用血清第二型人類表皮生長因子 (serum HER2 (sHER2) level)，文獻指出，在乳癌復發前，可測得較高的單一sHER2測量值。然而，使用單一sHER2測量值預測乳癌預後仍有其限制，除了設定單一閾值所造成的低敏感度外，單一測量值也無法表示病程與臨床表徵的連續變化，其他與乳癌復發預測有關的因子，如TNM tumor stage、雌性激素受體與孕激素受體等數值也無法一併分析。本計畫預計使用機器學習演算法，搭配多重測量值 (multiple measurements) 資料整合演算法，使用2002至2016年間在長庚紀念醫院林口院區與台北院區接受乳癌治療的病患資料，包括腫瘤相關資料 (TNM tumor stage、雌性激素受體表現、孕激素受體表現與第二型人類表皮生長因子接受體表現) 以及連續性的sHER2測量值，建立乳癌預後預測模型。乳癌預後預測標的為一年內再復發情形。此預測模型將可幫助乳癌案例的介入追蹤決策，進一步達到早期診斷，早期治療以及改善治療成效的目的。</description>
     </item>
     
   </channel>
