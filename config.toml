@@ -20,7 +20,7 @@ defaultContentLanguageInSubdir = false
 
 [params]
   name = "曾意儒 Yi-Ju Tseng"
-  role = "Assistant Professor of Information Management"
+  role = "Associate Professor of Information Management"
   organization = "Chang Gung University"
   organization_url = "http://im.cgu.edu.tw/"
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)

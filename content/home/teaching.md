@@ -18,6 +18,7 @@ weight = 60
     - 非關聯式資料庫 Non-Relational Database
     - 大數據分析方法 Big Data Analytical Methods
         - [數位學習影片](https://www.youtube.com/channel/UC2ZZMRLibtq2fD-la4YV_nA)
+        - [數位學習影片-播放清單](http://yijutseng.github.io/DataScienceRBook/video.html#video)
         - [資料科學與R語言 電子書](http://yijutseng.github.io/DataScienceRBook/)
 
 - Graduated Level
