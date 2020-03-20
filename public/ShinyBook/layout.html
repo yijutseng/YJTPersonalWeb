@@ -50,6 +50,14 @@
 
 
 
+<script src="libs/htmlwidgets/htmlwidgets.js"></script>
+<link href="libs/leaflet/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet/leaflet.js"></script>
+<link href="libs/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding/leaflet.js"></script>
 
 
 <style type="text/css">
@@ -144,7 +152,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="layout.html"><a href="layout.html#xxxlayout-和-xxxpanel"><i class="fa fa-check"></i><b>3.2</b> xxxLayout() 和 xxxPanel()</a></li>
 <li class="chapter" data-level="3.3" data-path="layout.html"><a href="layout.html#參考資料-1"><i class="fa fa-check"></i><b>3.3</b> 參考資料</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="input.html"><a href="input.html"><i class="fa fa-check"></i><b>4</b> 輸入Inputs</a></li>
+<li class="chapter" data-level="4" data-path="input.html"><a href="input.html"><i class="fa fa-check"></i><b>4</b> 輸入Inputs</a><ul>
+<li class="chapter" data-level="4.1" data-path="input.html"><a href="input.html#參考資料-2"><i class="fa fa-check"></i><b>4.1</b> 參考資料</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="output.html"><a href="output.html"><i class="fa fa-check"></i><b>5</b> 輸出 Outputs</a></li>
 <li class="chapter" data-level="6" data-path="server.html"><a href="server.html"><i class="fa fa-check"></i><b>6</b> 伺服器端程式 Server</a></li>
 <li class="chapter" data-level="7" data-path="design.html"><a href="design.html"><i class="fa fa-check"></i><b>7</b> 客製化使用者介面</a><ul>
@@ -156,7 +166,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.6" data-path="design.html"><a href="design.html#css"><i class="fa fa-check"></i><b>7.6</b> CSS</a></li>
 <li class="chapter" data-level="7.7" data-path="design.html"><a href="design.html#bootstrap"><i class="fa fa-check"></i><b>7.7</b> Bootstrap</a></li>
 <li class="chapter" data-level="7.8" data-path="design.html"><a href="design.html#sass"><i class="fa fa-check"></i><b>7.8</b> Sass</a></li>
-<li class="chapter" data-level="7.9" data-path="design.html"><a href="design.html#參考資料-2"><i class="fa fa-check"></i><b>7.9</b> 參考資料</a></li>
+<li class="chapter" data-level="7.9" data-path="design.html"><a href="design.html#參考資料-3"><i class="fa fa-check"></i><b>7.9</b> 參考資料</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="dashboard.html"><a href="dashboard.html"><i class="fa fa-check"></i><b>8</b> 儀表板</a></li>
 <li class="chapter" data-level="9" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>9</b> 介面與效能測試</a><ul>
@@ -166,7 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2.2" data-path="test.html"><a href="test.html#效能分析-analyze"><i class="fa fa-check"></i><b>9.2.2</b> 效能分析 Analyze</a></li>
 <li class="chapter" data-level="9.2.3" data-path="test.html"><a href="test.html#程式最佳化-optimize"><i class="fa fa-check"></i><b>9.2.3</b> 程式最佳化 Optimize</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="test.html"><a href="test.html#參考資料-3"><i class="fa fa-check"></i><b>9.3</b> 參考資料</a></li>
+<li class="chapter" data-level="9.3" data-path="test.html"><a href="test.html#參考資料-4"><i class="fa fa-check"></i><b>9.3</b> 參考資料</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="deploy.html"><a href="deploy.html"><i class="fa fa-check"></i><b>10</b> 將Shiny App上線</a></li>
 <li class="chapter" data-level="11" data-path="js.html"><a href="js.html"><i class="fa fa-check"></i><b>11</b> 客製化使用者介面</a><ul>
@@ -174,7 +184,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.2" data-path="js.html"><a href="js.html#javascript"><i class="fa fa-check"></i><b>11.2</b> JavaScript</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="author.html"><a href="author.html"><i class="fa fa-check"></i>作者資訊</a></li>
-<li class="chapter" data-level="" data-path="-4.html"><a href="-4.html"><i class="fa fa-check"></i>參考資料</a></li>
+<li class="chapter" data-level="" data-path="-5.html"><a href="-5.html"><i class="fa fa-check"></i>參考資料</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
