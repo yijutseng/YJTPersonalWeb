@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Ch. 5 伺服器端程式 Server | 使用R Shiny設計資料科學應用程式</title>
-  <meta name="description" content="Ch. 5 伺服器端程式 Server | 使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <title>Ch.6 伺服器端程式 Server | 使用R Shiny設計資料科學應用程式</title>
+  <meta name="description" content="Ch.6 伺服器端程式 Server | 使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Ch. 5 伺服器端程式 Server | 使用R Shiny設計資料科學應用程式" />
+  <meta property="og:title" content="Ch.6 伺服器端程式 Server | 使用R Shiny設計資料科學應用程式" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Ch. 5 伺服器端程式 Server | 使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
+  <meta property="og:description" content="Ch.6 伺服器端程式 Server | 使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Ch. 5 伺服器端程式 Server | 使用R Shiny設計資料科學應用程式" />
+  <meta name="twitter:title" content="Ch.6 伺服器端程式 Server | 使用R Shiny設計資料科學應用程式" />
   
-  <meta name="twitter:description" content="Ch. 5 伺服器端程式 Server | 使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
+  <meta name="twitter:description" content="Ch.6 伺服器端程式 Server | 使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
   
 
 <meta name="author" content="曾意儒 Yi-Ju Tseng" />
@@ -77,7 +77,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(title);
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -142,43 +142,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="index.html#preface"></a></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> 前言</a></li>
 <li class="chapter" data-level="2" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i><b>2</b> Shiny App架構</a><ul>
-<li class="chapter" data-level="2.1" data-path="structure.html"><a href="structure.html#使用者介面-user-interface"><i class="fa fa-check"></i><b>2.1</b> 使用者介面 (User Interface)</a></li>
-<li class="chapter" data-level="2.2" data-path="structure.html"><a href="structure.html#伺服器端程式-server-instruction"><i class="fa fa-check"></i><b>2.2</b> 伺服器端程式 (Server Instruction)</a></li>
-<li class="chapter" data-level="2.3" data-path="structure.html"><a href="structure.html#單一整合程式-app.r"><i class="fa fa-check"></i><b>2.3</b> 單一整合程式 app.R</a></li>
+<li class="chapter" data-level="2.1" data-path="structure.html"><a href="structure.html#單一整合程式-app.r"><i class="fa fa-check"></i><b>2.1</b> 單一整合程式 app.R</a></li>
+<li class="chapter" data-level="2.2" data-path="structure.html"><a href="structure.html#使用者介面-user-interface"><i class="fa fa-check"></i><b>2.2</b> 使用者介面 (User Interface)</a></li>
+<li class="chapter" data-level="2.3" data-path="structure.html"><a href="structure.html#伺服器端程式-server-instruction"><i class="fa fa-check"></i><b>2.3</b> 伺服器端程式 (Server Instruction)</a></li>
+<li class="chapter" data-level="2.4" data-path="structure.html"><a href="structure.html#參考資料"><i class="fa fa-check"></i><b>2.4</b> 參考資料</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="input.html"><a href="input.html"><i class="fa fa-check"></i><b>3</b> 輸入Inputs</a></li>
-<li class="chapter" data-level="4" data-path="output.html"><a href="output.html"><i class="fa fa-check"></i><b>4</b> 輸出 Outputs</a></li>
-<li class="chapter" data-level="5" data-path="server.html"><a href="server.html"><i class="fa fa-check"></i><b>5</b> 伺服器端程式 Server</a></li>
-<li class="chapter" data-level="6" data-path="design.html"><a href="design.html"><i class="fa fa-check"></i><b>6</b> 客製化使用者介面</a><ul>
-<li class="chapter" data-level="6.1" data-path="design.html"><a href="design.html#樣式模板"><i class="fa fa-check"></i><b>6.1</b> 樣式模板</a></li>
-<li class="chapter" data-level="6.2" data-path="design.html"><a href="design.html#section"><i class="fa fa-check"></i><b>6.2</b> </a></li>
-<li class="chapter" data-level="6.3" data-path="design.html"><a href="design.html#html-101"><i class="fa fa-check"></i><b>6.3</b> HTML 101</a></li>
-<li class="chapter" data-level="6.4" data-path="design.html"><a href="design.html#r---html"><i class="fa fa-check"></i><b>6.4</b> R -&gt; HTML</a></li>
-<li class="chapter" data-level="6.5" data-path="design.html"><a href="design.html#html-ui"><i class="fa fa-check"></i><b>6.5</b> HTML UI</a></li>
-<li class="chapter" data-level="6.6" data-path="design.html"><a href="design.html#layout"><i class="fa fa-check"></i><b>6.6</b> Layout</a></li>
-<li class="chapter" data-level="6.7" data-path="design.html"><a href="design.html#panels"><i class="fa fa-check"></i><b>6.7</b> Panels</a></li>
-<li class="chapter" data-level="6.8" data-path="design.html"><a href="design.html#css"><i class="fa fa-check"></i><b>6.8</b> CSS</a></li>
-<li class="chapter" data-level="6.9" data-path="design.html"><a href="design.html#bootstrap"><i class="fa fa-check"></i><b>6.9</b> Bootstrap</a></li>
-<li class="chapter" data-level="6.10" data-path="design.html"><a href="design.html#sass"><i class="fa fa-check"></i><b>6.10</b> Sass</a></li>
-<li class="chapter" data-level="6.11" data-path="design.html"><a href="design.html#參考資料"><i class="fa fa-check"></i><b>6.11</b> 參考資料</a></li>
+<li class="chapter" data-level="3" data-path="layout.html"><a href="layout.html"><i class="fa fa-check"></i><b>3</b> 版面設定</a><ul>
+<li class="chapter" data-level="3.1" data-path="layout.html"><a href="layout.html#xxxpage"><i class="fa fa-check"></i><b>3.1</b> xxxPage()</a></li>
+<li class="chapter" data-level="3.2" data-path="layout.html"><a href="layout.html#xxxlayout-和-xxxpanel"><i class="fa fa-check"></i><b>3.2</b> xxxLayout() 和 xxxPanel()</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="dashboard.html"><a href="dashboard.html"><i class="fa fa-check"></i><b>7</b> 儀表板</a></li>
-<li class="chapter" data-level="8" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>8</b> 介面與效能測試</a><ul>
-<li class="chapter" data-level="8.1" data-path="test.html"><a href="test.html#介面測試"><i class="fa fa-check"></i><b>8.1</b> 介面測試</a></li>
-<li class="chapter" data-level="8.2" data-path="test.html"><a href="test.html#效能測試"><i class="fa fa-check"></i><b>8.2</b> 效能測試</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="test.html"><a href="test.html#基準測試-benchmark"><i class="fa fa-check"></i><b>8.2.1</b> 基準測試 Benchmark</a></li>
-<li class="chapter" data-level="8.2.2" data-path="test.html"><a href="test.html#效能分析-analyze"><i class="fa fa-check"></i><b>8.2.2</b> 效能分析 Analyze</a></li>
-<li class="chapter" data-level="8.2.3" data-path="test.html"><a href="test.html#程式最佳化-optimize"><i class="fa fa-check"></i><b>8.2.3</b> 程式最佳化 Optimize</a></li>
+<li class="chapter" data-level="4" data-path="input.html"><a href="input.html"><i class="fa fa-check"></i><b>4</b> 輸入Inputs</a></li>
+<li class="chapter" data-level="5" data-path="output.html"><a href="output.html"><i class="fa fa-check"></i><b>5</b> 輸出 Outputs</a></li>
+<li class="chapter" data-level="6" data-path="server.html"><a href="server.html"><i class="fa fa-check"></i><b>6</b> 伺服器端程式 Server</a></li>
+<li class="chapter" data-level="7" data-path="design.html"><a href="design.html"><i class="fa fa-check"></i><b>7</b> 客製化使用者介面</a><ul>
+<li class="chapter" data-level="7.1" data-path="design.html"><a href="design.html#樣式模板"><i class="fa fa-check"></i><b>7.1</b> 樣式模板</a></li>
+<li class="chapter" data-level="7.2" data-path="design.html"><a href="design.html#section"><i class="fa fa-check"></i><b>7.2</b> </a></li>
+<li class="chapter" data-level="7.3" data-path="design.html"><a href="design.html#html-101"><i class="fa fa-check"></i><b>7.3</b> HTML 101</a></li>
+<li class="chapter" data-level="7.4" data-path="design.html"><a href="design.html#r---html"><i class="fa fa-check"></i><b>7.4</b> R -&gt; HTML</a></li>
+<li class="chapter" data-level="7.5" data-path="design.html"><a href="design.html#html-ui"><i class="fa fa-check"></i><b>7.5</b> HTML UI</a></li>
+<li class="chapter" data-level="7.6" data-path="design.html"><a href="design.html#css"><i class="fa fa-check"></i><b>7.6</b> CSS</a></li>
+<li class="chapter" data-level="7.7" data-path="design.html"><a href="design.html#bootstrap"><i class="fa fa-check"></i><b>7.7</b> Bootstrap</a></li>
+<li class="chapter" data-level="7.8" data-path="design.html"><a href="design.html#sass"><i class="fa fa-check"></i><b>7.8</b> Sass</a></li>
+<li class="chapter" data-level="7.9" data-path="design.html"><a href="design.html#參考資料-1"><i class="fa fa-check"></i><b>7.9</b> 參考資料</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="test.html"><a href="test.html#參考資料-1"><i class="fa fa-check"></i><b>8.3</b> 參考資料</a></li>
+<li class="chapter" data-level="8" data-path="dashboard.html"><a href="dashboard.html"><i class="fa fa-check"></i><b>8</b> 儀表板</a></li>
+<li class="chapter" data-level="9" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>9</b> 介面與效能測試</a><ul>
+<li class="chapter" data-level="9.1" data-path="test.html"><a href="test.html#介面測試"><i class="fa fa-check"></i><b>9.1</b> 介面測試</a></li>
+<li class="chapter" data-level="9.2" data-path="test.html"><a href="test.html#效能測試"><i class="fa fa-check"></i><b>9.2</b> 效能測試</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="test.html"><a href="test.html#基準測試-benchmark"><i class="fa fa-check"></i><b>9.2.1</b> 基準測試 Benchmark</a></li>
+<li class="chapter" data-level="9.2.2" data-path="test.html"><a href="test.html#效能分析-analyze"><i class="fa fa-check"></i><b>9.2.2</b> 效能分析 Analyze</a></li>
+<li class="chapter" data-level="9.2.3" data-path="test.html"><a href="test.html#程式最佳化-optimize"><i class="fa fa-check"></i><b>9.2.3</b> 程式最佳化 Optimize</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="js.html"><a href="js.html"><i class="fa fa-check"></i><b>9</b> 客製化使用者介面</a><ul>
-<li class="chapter" data-level="9.1" data-path="js.html"><a href="js.html#d3.js"><i class="fa fa-check"></i><b>9.1</b> D3.js</a></li>
-<li class="chapter" data-level="9.2" data-path="js.html"><a href="js.html#javascript"><i class="fa fa-check"></i><b>9.2</b> JavaScript</a></li>
+<li class="chapter" data-level="9.3" data-path="test.html"><a href="test.html#參考資料-2"><i class="fa fa-check"></i><b>9.3</b> 參考資料</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="deploy.html"><a href="deploy.html"><i class="fa fa-check"></i><b>10</b> 將Shiny App上線</a></li>
+<li class="chapter" data-level="11" data-path="js.html"><a href="js.html"><i class="fa fa-check"></i><b>11</b> 客製化使用者介面</a><ul>
+<li class="chapter" data-level="11.1" data-path="js.html"><a href="js.html#d3.js"><i class="fa fa-check"></i><b>11.1</b> D3.js</a></li>
+<li class="chapter" data-level="11.2" data-path="js.html"><a href="js.html#javascript"><i class="fa fa-check"></i><b>11.2</b> JavaScript</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="author.html"><a href="author.html"><i class="fa fa-check"></i>作者資訊</a></li>
-<li class="chapter" data-level="" data-path="參考資料-2.html"><a href="參考資料-2.html"><i class="fa fa-check"></i>參考資料</a></li>
+<li class="chapter" data-level="" data-path="-3.html"><a href="-3.html"><i class="fa fa-check"></i>參考資料</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -200,30 +203,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="server" class="section level1">
-<h1><span class="header-section-number">Ch. 5</span> 伺服器端程式 Server</h1>
+<h1><span class="header-section-number">Ch.6</span> 伺服器端程式 Server</h1>
 <p>伺服器端程式中有server函數，server函數的格式如下:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">server &lt;-<span class="st"> </span><span class="cf">function</span> (input,output){</a>
-<a class="sourceLine" id="cb12-2" title="2">  </a>
-<a class="sourceLine" id="cb12-3" title="3">}</a></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">server &lt;-<span class="st"> </span><span class="cf">function</span> (input,output){</a>
+<a class="sourceLine" id="cb22-2" data-line-number="2">  </a>
+<a class="sourceLine" id="cb22-3" data-line-number="3">}</a></code></pre></div>
 <p>在server函數中，兩個固定的參數分別為input與output，分別為使用者介面UI函數中所包含輸入input與輸出output相關元件，若須取用特定輸入與輸出相關元件，可使用<code>輸入或輸出$Id</code>作為取用路徑，如<code>input$checkbox</code>，<code>output$plot</code>等，<code>$</code>錢字號前方指定取用輸入元件還是輸出元件，後方指定元件的Id。因此，在使用者介面UI函數中，幫各輸入與輸出元件取容易記憶與識別的Id是很重要的。</p>
 <p>server函數中最重要的功能為<strong>產出使用者介面所需的輸出元件(內容)</strong>，為了產出輸出元件，我們必須使用渲染函數(Render function)，渲染函數與輸入輸出函數類似，有固定的格式，通常為<code>renderXXX()</code>，<code>XXX</code>為<strong>需要呈現的資料/內容格式</strong>，如<code>Plot</code>、<code>Image</code>、<code>Table</code>等，組合成<code>renderPlot()</code>、<code>renderImage()</code>等函數。渲染函數的輸入參數為一獨立函數，此函數必須使用<code>{ }</code>大括號包起來。與撰寫函數一樣，<code>{ }</code>大括號中可有無限多行程式碼，以<strong>製作與產生需要呈現的資料/內容</strong>，如直方圖<code>hist(1:30)</code></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1">server &lt;-<span class="st"> </span><span class="cf">function</span> (input,output){</a>
-<a class="sourceLine" id="cb13-2" title="2">  <span class="kw">renderPlot</span>( {</a>
-<a class="sourceLine" id="cb13-3" title="3">    <span class="kw">hist</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">30</span>) </a>
-<a class="sourceLine" id="cb13-4" title="4">  } )</a>
-<a class="sourceLine" id="cb13-5" title="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1">server &lt;-<span class="st"> </span><span class="cf">function</span> (input,output){</a>
+<a class="sourceLine" id="cb23-2" data-line-number="2">  <span class="kw">renderPlot</span>( {</a>
+<a class="sourceLine" id="cb23-3" data-line-number="3">    <span class="kw">hist</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">30</span>) </a>
+<a class="sourceLine" id="cb23-4" data-line-number="4">  } )</a>
+<a class="sourceLine" id="cb23-5" data-line-number="5">}</a></code></pre></div>
 <p>若輸出的圖形/資料會依照輸入資料改變，則需要在渲染函數中取用輸入元件，取用方式為<code>輸入或輸出$Id</code>，如<code>input$checkbox</code>、<code>input$max_num</code>等，輸入元件的值會隨著使用者介面的調整而即時變動，呈上述範例，我們可以將原最大數值<code>30</code>改為由輸入元件<code>input$max_num</code>決定，以達成<strong>互動式</strong>應用程式的效果。</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">server &lt;-<span class="st"> </span><span class="cf">function</span> (input,output){</a>
-<a class="sourceLine" id="cb14-2" title="2">  <span class="kw">renderPlot</span>( {</a>
-<a class="sourceLine" id="cb14-3" title="3">    <span class="kw">hist</span>(<span class="dv">1</span><span class="op">:</span>input<span class="op">$</span>max_num) </a>
-<a class="sourceLine" id="cb14-4" title="4">  } )</a>
-<a class="sourceLine" id="cb14-5" title="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">server &lt;-<span class="st"> </span><span class="cf">function</span> (input,output){</a>
+<a class="sourceLine" id="cb24-2" data-line-number="2">  <span class="kw">renderPlot</span>( {</a>
+<a class="sourceLine" id="cb24-3" data-line-number="3">    <span class="kw">hist</span>(<span class="dv">1</span><span class="op">:</span>input<span class="op">$</span>max_num) </a>
+<a class="sourceLine" id="cb24-4" data-line-number="4">  } )</a>
+<a class="sourceLine" id="cb24-5" data-line-number="5">}</a></code></pre></div>
 <p>最後將渲染函數的值指定給輸出元件，如<code>output$plot&lt;-渲染函數({#一大堆程式碼})</code>，即完成使用者介面所需的輸出output元件的產出程式。</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1">server &lt;-<span class="st"> </span><span class="cf">function</span> (input,output){</a>
-<a class="sourceLine" id="cb15-2" title="2">  output<span class="op">$</span>plot&lt;-<span class="kw">renderPlot</span>( {</a>
-<a class="sourceLine" id="cb15-3" title="3">    <span class="kw">hist</span>(<span class="dv">1</span><span class="op">:</span>input<span class="op">$</span>max_num) </a>
-<a class="sourceLine" id="cb15-4" title="4">  } )</a>
-<a class="sourceLine" id="cb15-5" title="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1">server &lt;-<span class="st"> </span><span class="cf">function</span> (input,output){</a>
+<a class="sourceLine" id="cb25-2" data-line-number="2">  output<span class="op">$</span>plot&lt;-<span class="kw">renderPlot</span>( {</a>
+<a class="sourceLine" id="cb25-3" data-line-number="3">    <span class="kw">hist</span>(<span class="dv">1</span><span class="op">:</span>input<span class="op">$</span>max_num) </a>
+<a class="sourceLine" id="cb25-4" data-line-number="4">  } )</a>
+<a class="sourceLine" id="cb25-5" data-line-number="5">}</a></code></pre></div>
 <p>反應函數Reactive function</p>
 <p>在使用者介面中，當輸入元件 (如<code>input$num</code>)的值改變時，會通知使用該輸入元件的反應函數，該反應函數使用該輸入元件的新值，並做相對應的運算與輸出處理。</p>
 <p>Use a code chunk to build an object</p>
@@ -236,16 +239,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 6.
 7.</p>
 <p>以渲染函數來說，若輸入元件 (如<code>input$num</code>)的值改變時，渲染函數<code>renderPlot({ })</code>大括號<code>{ }</code>中的程式碼會從頭到尾從新執行一次。</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="kw">renderPlot</span>( {</a>
-<a class="sourceLine" id="cb16-2" title="2">  <span class="co">## re-run start</span></a>
-<a class="sourceLine" id="cb16-3" title="3">    <span class="kw">hist</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">30</span>) </a>
-<a class="sourceLine" id="cb16-4" title="4">  <span class="co">## re-run end</span></a>
-<a class="sourceLine" id="cb16-5" title="5">  } )</a></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="kw">renderPlot</span>( {</a>
+<a class="sourceLine" id="cb26-2" data-line-number="2">  <span class="co">## re-run start</span></a>
+<a class="sourceLine" id="cb26-3" data-line-number="3">    <span class="kw">hist</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">30</span>) </a>
+<a class="sourceLine" id="cb26-4" data-line-number="4">  <span class="co">## re-run end</span></a>
+<a class="sourceLine" id="cb26-5" data-line-number="5">  } )</a></code></pre></div>
 <p>在某些狀況中，渲染函數<code>renderPlot({ })</code>大括號<code>{ }</code>中的程式碼會在server function中出現多次，若每次輸入元件改變時，同樣的程式碼必須執行多次，在效能上可能會出現問題，此時可用反應函數<code>reactive()</code>，將執行結果暫存。</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1">data&lt;-<span class="kw">reactive</span>({</a>
-<a class="sourceLine" id="cb17-2" title="2">  </a>
-<a class="sourceLine" id="cb17-3" title="3">}</a>
-<a class="sourceLine" id="cb17-4" title="4">)</a></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1">data&lt;-<span class="kw">reactive</span>({</a>
+<a class="sourceLine" id="cb27-2" data-line-number="2">  </a>
+<a class="sourceLine" id="cb27-3" data-line-number="3">}</a>
+<a class="sourceLine" id="cb27-4" data-line-number="4">)</a></code></pre></div>
 <p><code>isolate()</code>
 將不需即時反應/重跑程式的輸入元件放入隔離函數<code>isolate()</code>中，即可將此輸入元件變成非反應元件，當此輸入元件改變時，程式並不會成跑，此法可降低程式重跑的次數，提升效能與使用者體驗。</p>
 <p><code>observeEvent()</code>，當<code>observeEvent()</code>中的輸入元件改變時，將會觸發伺服器端程式碼的執行</p>
@@ -257,6 +260,7 @@ action button</p>
 <p><code>reactiveValues()</code>
 藉由輸入函數，修改自定義的資料內容，接著觸發反應函數的功能，並更新相對應的輸出</p>
 <p>timer</p>
+<p>以Shiny App的設計來說，每個使用者打開你所開發的Shiny App時，<strong>伺服器端程式 (Server Instruction)</strong>中的程式碼都會執行，但其他部分的程式只會在每個R session開始時執行一次。</p>
 
 </div>
             </section>
@@ -284,11 +288,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -300,10 +305,6 @@ gitbook.start({
 "text": null
 },
 "history": {
-"link": null,
-"text": null
-},
-"view": {
 "link": null,
 "text": null
 },

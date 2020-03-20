@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>使用R Shiny設計資料科學應用程式</title>
   <meta name="description" content="使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
   <meta property="og:title" content="使用R Shiny設計資料科學應用程式" />
   <meta property="og:type" content="book" />
@@ -69,7 +69,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(title);
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -134,43 +134,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="index.html#preface"></a></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> 前言</a></li>
 <li class="chapter" data-level="2" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i><b>2</b> Shiny App架構</a><ul>
-<li class="chapter" data-level="2.1" data-path="structure.html"><a href="structure.html#使用者介面-user-interface"><i class="fa fa-check"></i><b>2.1</b> 使用者介面 (User Interface)</a></li>
-<li class="chapter" data-level="2.2" data-path="structure.html"><a href="structure.html#伺服器端程式-server-instruction"><i class="fa fa-check"></i><b>2.2</b> 伺服器端程式 (Server Instruction)</a></li>
-<li class="chapter" data-level="2.3" data-path="structure.html"><a href="structure.html#單一整合程式-app.r"><i class="fa fa-check"></i><b>2.3</b> 單一整合程式 app.R</a></li>
+<li class="chapter" data-level="2.1" data-path="structure.html"><a href="structure.html#單一整合程式-app.r"><i class="fa fa-check"></i><b>2.1</b> 單一整合程式 app.R</a></li>
+<li class="chapter" data-level="2.2" data-path="structure.html"><a href="structure.html#使用者介面-user-interface"><i class="fa fa-check"></i><b>2.2</b> 使用者介面 (User Interface)</a></li>
+<li class="chapter" data-level="2.3" data-path="structure.html"><a href="structure.html#伺服器端程式-server-instruction"><i class="fa fa-check"></i><b>2.3</b> 伺服器端程式 (Server Instruction)</a></li>
+<li class="chapter" data-level="2.4" data-path="structure.html"><a href="structure.html#參考資料"><i class="fa fa-check"></i><b>2.4</b> 參考資料</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="input.html"><a href="input.html"><i class="fa fa-check"></i><b>3</b> 輸入Inputs</a></li>
-<li class="chapter" data-level="4" data-path="output.html"><a href="output.html"><i class="fa fa-check"></i><b>4</b> 輸出 Outputs</a></li>
-<li class="chapter" data-level="5" data-path="server.html"><a href="server.html"><i class="fa fa-check"></i><b>5</b> 伺服器端程式 Server</a></li>
-<li class="chapter" data-level="6" data-path="design.html"><a href="design.html"><i class="fa fa-check"></i><b>6</b> 客製化使用者介面</a><ul>
-<li class="chapter" data-level="6.1" data-path="design.html"><a href="design.html#樣式模板"><i class="fa fa-check"></i><b>6.1</b> 樣式模板</a></li>
-<li class="chapter" data-level="6.2" data-path="design.html"><a href="design.html#section"><i class="fa fa-check"></i><b>6.2</b> </a></li>
-<li class="chapter" data-level="6.3" data-path="design.html"><a href="design.html#html-101"><i class="fa fa-check"></i><b>6.3</b> HTML 101</a></li>
-<li class="chapter" data-level="6.4" data-path="design.html"><a href="design.html#r---html"><i class="fa fa-check"></i><b>6.4</b> R -&gt; HTML</a></li>
-<li class="chapter" data-level="6.5" data-path="design.html"><a href="design.html#html-ui"><i class="fa fa-check"></i><b>6.5</b> HTML UI</a></li>
-<li class="chapter" data-level="6.6" data-path="design.html"><a href="design.html#layout"><i class="fa fa-check"></i><b>6.6</b> Layout</a></li>
-<li class="chapter" data-level="6.7" data-path="design.html"><a href="design.html#panels"><i class="fa fa-check"></i><b>6.7</b> Panels</a></li>
-<li class="chapter" data-level="6.8" data-path="design.html"><a href="design.html#css"><i class="fa fa-check"></i><b>6.8</b> CSS</a></li>
-<li class="chapter" data-level="6.9" data-path="design.html"><a href="design.html#bootstrap"><i class="fa fa-check"></i><b>6.9</b> Bootstrap</a></li>
-<li class="chapter" data-level="6.10" data-path="design.html"><a href="design.html#sass"><i class="fa fa-check"></i><b>6.10</b> Sass</a></li>
-<li class="chapter" data-level="6.11" data-path="design.html"><a href="design.html#參考資料"><i class="fa fa-check"></i><b>6.11</b> 參考資料</a></li>
+<li class="chapter" data-level="3" data-path="layout.html"><a href="layout.html"><i class="fa fa-check"></i><b>3</b> 版面設定</a><ul>
+<li class="chapter" data-level="3.1" data-path="layout.html"><a href="layout.html#xxxpage"><i class="fa fa-check"></i><b>3.1</b> xxxPage()</a></li>
+<li class="chapter" data-level="3.2" data-path="layout.html"><a href="layout.html#xxxlayout-和-xxxpanel"><i class="fa fa-check"></i><b>3.2</b> xxxLayout() 和 xxxPanel()</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="dashboard.html"><a href="dashboard.html"><i class="fa fa-check"></i><b>7</b> 儀表板</a></li>
-<li class="chapter" data-level="8" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>8</b> 介面與效能測試</a><ul>
-<li class="chapter" data-level="8.1" data-path="test.html"><a href="test.html#介面測試"><i class="fa fa-check"></i><b>8.1</b> 介面測試</a></li>
-<li class="chapter" data-level="8.2" data-path="test.html"><a href="test.html#效能測試"><i class="fa fa-check"></i><b>8.2</b> 效能測試</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="test.html"><a href="test.html#基準測試-benchmark"><i class="fa fa-check"></i><b>8.2.1</b> 基準測試 Benchmark</a></li>
-<li class="chapter" data-level="8.2.2" data-path="test.html"><a href="test.html#效能分析-analyze"><i class="fa fa-check"></i><b>8.2.2</b> 效能分析 Analyze</a></li>
-<li class="chapter" data-level="8.2.3" data-path="test.html"><a href="test.html#程式最佳化-optimize"><i class="fa fa-check"></i><b>8.2.3</b> 程式最佳化 Optimize</a></li>
+<li class="chapter" data-level="4" data-path="input.html"><a href="input.html"><i class="fa fa-check"></i><b>4</b> 輸入Inputs</a></li>
+<li class="chapter" data-level="5" data-path="output.html"><a href="output.html"><i class="fa fa-check"></i><b>5</b> 輸出 Outputs</a></li>
+<li class="chapter" data-level="6" data-path="server.html"><a href="server.html"><i class="fa fa-check"></i><b>6</b> 伺服器端程式 Server</a></li>
+<li class="chapter" data-level="7" data-path="design.html"><a href="design.html"><i class="fa fa-check"></i><b>7</b> 客製化使用者介面</a><ul>
+<li class="chapter" data-level="7.1" data-path="design.html"><a href="design.html#樣式模板"><i class="fa fa-check"></i><b>7.1</b> 樣式模板</a></li>
+<li class="chapter" data-level="7.2" data-path="design.html"><a href="design.html#section"><i class="fa fa-check"></i><b>7.2</b> </a></li>
+<li class="chapter" data-level="7.3" data-path="design.html"><a href="design.html#html-101"><i class="fa fa-check"></i><b>7.3</b> HTML 101</a></li>
+<li class="chapter" data-level="7.4" data-path="design.html"><a href="design.html#r---html"><i class="fa fa-check"></i><b>7.4</b> R -&gt; HTML</a></li>
+<li class="chapter" data-level="7.5" data-path="design.html"><a href="design.html#html-ui"><i class="fa fa-check"></i><b>7.5</b> HTML UI</a></li>
+<li class="chapter" data-level="7.6" data-path="design.html"><a href="design.html#css"><i class="fa fa-check"></i><b>7.6</b> CSS</a></li>
+<li class="chapter" data-level="7.7" data-path="design.html"><a href="design.html#bootstrap"><i class="fa fa-check"></i><b>7.7</b> Bootstrap</a></li>
+<li class="chapter" data-level="7.8" data-path="design.html"><a href="design.html#sass"><i class="fa fa-check"></i><b>7.8</b> Sass</a></li>
+<li class="chapter" data-level="7.9" data-path="design.html"><a href="design.html#參考資料-1"><i class="fa fa-check"></i><b>7.9</b> 參考資料</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="test.html"><a href="test.html#參考資料-1"><i class="fa fa-check"></i><b>8.3</b> 參考資料</a></li>
+<li class="chapter" data-level="8" data-path="dashboard.html"><a href="dashboard.html"><i class="fa fa-check"></i><b>8</b> 儀表板</a></li>
+<li class="chapter" data-level="9" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>9</b> 介面與效能測試</a><ul>
+<li class="chapter" data-level="9.1" data-path="test.html"><a href="test.html#介面測試"><i class="fa fa-check"></i><b>9.1</b> 介面測試</a></li>
+<li class="chapter" data-level="9.2" data-path="test.html"><a href="test.html#效能測試"><i class="fa fa-check"></i><b>9.2</b> 效能測試</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="test.html"><a href="test.html#基準測試-benchmark"><i class="fa fa-check"></i><b>9.2.1</b> 基準測試 Benchmark</a></li>
+<li class="chapter" data-level="9.2.2" data-path="test.html"><a href="test.html#效能分析-analyze"><i class="fa fa-check"></i><b>9.2.2</b> 效能分析 Analyze</a></li>
+<li class="chapter" data-level="9.2.3" data-path="test.html"><a href="test.html#程式最佳化-optimize"><i class="fa fa-check"></i><b>9.2.3</b> 程式最佳化 Optimize</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="js.html"><a href="js.html"><i class="fa fa-check"></i><b>9</b> 客製化使用者介面</a><ul>
-<li class="chapter" data-level="9.1" data-path="js.html"><a href="js.html#d3.js"><i class="fa fa-check"></i><b>9.1</b> D3.js</a></li>
-<li class="chapter" data-level="9.2" data-path="js.html"><a href="js.html#javascript"><i class="fa fa-check"></i><b>9.2</b> JavaScript</a></li>
+<li class="chapter" data-level="9.3" data-path="test.html"><a href="test.html#參考資料-2"><i class="fa fa-check"></i><b>9.3</b> 參考資料</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="deploy.html"><a href="deploy.html"><i class="fa fa-check"></i><b>10</b> 將Shiny App上線</a></li>
+<li class="chapter" data-level="11" data-path="js.html"><a href="js.html"><i class="fa fa-check"></i><b>11</b> 客製化使用者介面</a><ul>
+<li class="chapter" data-level="11.1" data-path="js.html"><a href="js.html#d3.js"><i class="fa fa-check"></i><b>11.1</b> D3.js</a></li>
+<li class="chapter" data-level="11.2" data-path="js.html"><a href="js.html#javascript"><i class="fa fa-check"></i><b>11.2</b> JavaScript</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="author.html"><a href="author.html"><i class="fa fa-check"></i>作者資訊</a></li>
-<li class="chapter" data-level="" data-path="參考資料-2.html"><a href="參考資料-2.html"><i class="fa fa-check"></i>參考資料</a></li>
+<li class="chapter" data-level="" data-path="-3.html"><a href="-3.html"><i class="fa fa-check"></i>參考資料</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -199,51 +202,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="preface" class="section level1 unnumbered">
 <h1></h1>
 <p>本書介如何使用<a href="https://www.r-project.org/" target="_blank">R語言</a>以及<a href="https://shiny.rstudio.com/" target="_blank">Shiny App</a>開發資料科學相關的<strong>網頁應用程式</strong>，包括<strong>互動式圖表</strong>、<strong>儀表板</strong>、<strong>互動式資料分析服務</strong>等。</p>
+<p>本書仍在草稿撰寫階段，已完成第1至3章，後續章節逐步更新中。</p>
 <p>如要一次安裝所有本書會使用到的套件，可在R內執行以下程式碼：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</a>
-<a class="sourceLine" id="cb1-2" title="2">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;yijutseng/DataSciencewithRShinyBook&quot;</span>)</a></code></pre></div>
-<p>如果您想修改文字或範例，歡迎透過<a href="https://github.com/yijutseng/DataSciencewithRShinyBook/issues" target="_blank">GitHub</a> issue提供建議與回饋。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;yijutseng/DataSciencewithRShinyBook&quot;</span>)</a></code></pre></div>
+<p>如果您想修改文字或範例，歡迎透過 <a href="https://github.com/yijutseng/DataSciencewithRShinyBook/issues" target="_blank">GitHub</a> issue提供建議與回饋。</p>
 <p>本書程式碼執行環境：</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
-<pre><code>## R version 3.6.3 (2020-02-29)
-## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 10 x64 (build 18363)
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
+<pre><code>## R version 3.6.1 (2019-07-05)
+## Platform: x86_64-apple-darwin15.6.0 (64-bit)
+## Running under: macOS Catalina 10.15.3
 ## 
 ## Matrix products: default
+## BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
 ## 
 ## locale:
-## [1] LC_COLLATE=Chinese (Traditional)_Taiwan.950 
-## [2] LC_CTYPE=Chinese (Traditional)_Taiwan.950   
-## [3] LC_MONETARY=Chinese (Traditional)_Taiwan.950
-## [4] LC_NUMERIC=C                                
-## [5] LC_TIME=Chinese (Traditional)_Taiwan.950    
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] shinyloadtest_1.0.1   profvis_0.3.6         shinydashboard_0.7.1 
-##  [4] shinythemes_1.1.2     rsconnect_0.8.16-9001 shiny_1.4.0.2        
-##  [7] forcats_0.5.0         stringr_1.4.0         dplyr_0.8.5          
-## [10] purrr_0.3.3           readr_1.3.1           tidyr_1.0.2          
-## [13] tibble_2.1.3          ggplot2_3.3.0         tidyverse_1.3.0      
+##  [1] leaflet_2.0.3        shinyloadtest_1.0.1  profvis_0.3.6       
+##  [4] shinydashboard_0.7.1 shinythemes_1.1.2    rsconnect_0.8.15    
+##  [7] shiny_1.4.0.2        forcats_0.4.0        stringr_1.4.0       
+## [10] dplyr_0.8.3          purrr_0.3.3          readr_1.3.1         
+## [13] tidyr_1.0.0          tibble_2.1.3         ggplot2_3.2.1       
+## [16] tidyverse_1.3.0     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_1.0.4        lubridate_1.7.4   lattice_0.20-38   assertthat_0.2.1 
-##  [5] digest_0.6.25     mime_0.9          R6_2.4.1          cellranger_1.1.0 
-##  [9] backports_1.1.5   reprex_0.3.0      evaluate_0.14     httr_1.4.1       
-## [13] pillar_1.4.3      rlang_0.4.5       readxl_1.3.1      rstudioapi_0.11  
-## [17] rmarkdown_2.1     htmlwidgets_1.5.1 munsell_0.5.0     broom_0.5.5      
-## [21] compiler_3.6.3    httpuv_1.5.2      modelr_0.1.6      xfun_0.12        
-## [25] pkgconfig_2.0.3   htmltools_0.4.0   tidyselect_1.0.0  bookdown_0.18    
-## [29] fansi_0.4.1       crayon_1.3.4      dbplyr_1.4.2      withr_2.1.2      
-## [33] later_1.0.0       grid_3.6.3        nlme_3.1-144      jsonlite_1.6.1   
-## [37] xtable_1.8-4      gtable_0.3.0      lifecycle_0.2.0   DBI_1.1.0        
-## [41] magrittr_1.5      scales_1.1.0      cli_2.0.2         stringi_1.4.6    
-## [45] fs_1.3.2          promises_1.1.0    xml2_1.2.5        generics_0.0.2   
-## [49] vctrs_0.2.4       tools_3.6.3       glue_1.3.2        hms_0.5.3        
-## [53] fastmap_1.0.1     yaml_2.2.1        colorspace_1.4-1  rvest_0.3.5      
-## [57] knitr_1.28        haven_2.2.0</code></pre>
+##  [1] Rcpp_1.0.2        lubridate_1.7.4   lattice_0.20-38   png_0.1-7        
+##  [5] assertthat_0.2.1  digest_0.6.21     packrat_0.5.0     mime_0.7         
+##  [9] R6_2.4.0          cellranger_1.1.0  backports_1.1.5   reprex_0.3.0     
+## [13] evaluate_0.14     highr_0.8         httr_1.4.1        pillar_1.4.2     
+## [17] rlang_0.4.4       lazyeval_0.2.2    readxl_1.3.1      rstudioapi_0.10  
+## [21] rmarkdown_1.16    servr_0.15        htmlwidgets_1.5.1 munsell_0.5.0    
+## [25] broom_0.5.2       compiler_3.6.1    httpuv_1.5.2      modelr_0.1.6     
+## [29] xfun_0.10         pkgconfig_2.0.3   htmltools_0.4.0   tidyselect_0.2.5 
+## [33] bookdown_0.14     crayon_1.3.4      dbplyr_1.4.2      withr_2.1.2      
+## [37] later_1.0.0       grid_3.6.1        nlme_3.1-140      jsonlite_1.6     
+## [41] xtable_1.8-4      gtable_0.3.0      lifecycle_0.1.0   DBI_1.0.0        
+## [45] magrittr_1.5      scales_1.0.0      cli_1.1.0         stringi_1.4.3    
+## [49] fs_1.3.1          promises_1.1.0    xml2_1.2.2        generics_0.0.2   
+## [53] vctrs_0.2.3       tools_3.6.1       glue_1.3.1        crosstalk_1.0.0  
+## [57] hms_0.5.3         fastmap_1.0.1     yaml_2.2.0        colorspace_1.4-1 
+## [61] rvest_0.3.5       knitr_1.25        haven_2.2.0</code></pre>
 <p>本書使用套件版本：</p>
 <table>
 <thead>
@@ -263,7 +267,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td align="left">rsconnect</td>
-<td align="left">0.8.16-9001</td>
+<td align="left">0.8.15</td>
 </tr>
 <tr class="even">
 <td align="left">shinythemes</td>
@@ -311,11 +315,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -327,10 +332,6 @@ gitbook.start({
 "text": null
 },
 "history": {
-"link": null,
-"text": null
-},
-"view": {
 "link": null,
 "text": null
 },
