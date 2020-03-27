@@ -4,35 +4,35 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Ch 9 介面與效能測試 | 使用R Shiny設計資料科學應用程式</title>
-  <meta name="description" content="Ch 9 介面與效能測試 | 使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
+  <title>Ch 12 介面與效能測試 | 使用R Shiny設計資料科學應用程式</title>
+  <meta name="description" content="Ch 12 介面與效能測試 | 使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
   <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Ch 9 介面與效能測試 | 使用R Shiny設計資料科學應用程式" />
+  <meta property="og:title" content="Ch 12 介面與效能測試 | 使用R Shiny設計資料科學應用程式" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Ch 9 介面與效能測試 | 使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
+  <meta property="og:description" content="Ch 12 介面與效能測試 | 使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Ch 9 介面與效能測試 | 使用R Shiny設計資料科學應用程式" />
+  <meta name="twitter:title" content="Ch 12 介面與效能測試 | 使用R Shiny設計資料科學應用程式" />
   
-  <meta name="twitter:description" content="Ch 9 介面與效能測試 | 使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
+  <meta name="twitter:description" content="Ch 12 介面與效能測試 | 使用R Shiny設計資料科學應用程式 R Shiny for Data Science Application" />
   
 
 <meta name="author" content="曾意儒 Yi-Ju Tseng" />
 
 
-<meta name="date" content="2020-03-21" />
+<meta name="date" content="2020-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="design.html"/>
-<link rel="next" href="deploy.html"/>
+<link rel="prev" href="js.html"/>
+<link rel="next" href="author.html"/>
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -50,6 +50,14 @@
 
 
 
+<script src="libs/htmlwidgets/htmlwidgets.js"></script>
+<link href="libs/leaflet/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet/leaflet.js"></script>
+<link href="libs/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding/leaflet.js"></script>
 
 
 <style type="text/css">
@@ -132,58 +140,81 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li><a href="index.html#preface"></a></li>
+<li class="part"><span><b>I 快速上手</b></span></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> 前言</a></li>
 <li class="chapter" data-level="2" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i><b>2</b> Shiny App架構</a><ul>
 <li class="chapter" data-level="2.1" data-path="structure.html"><a href="structure.html#單一整合程式-app.r"><i class="fa fa-check"></i><b>2.1</b> 單一整合程式 app.R</a></li>
 <li class="chapter" data-level="2.2" data-path="structure.html"><a href="structure.html#使用者介面-user-interface"><i class="fa fa-check"></i><b>2.2</b> 使用者介面 (User Interface)</a></li>
 <li class="chapter" data-level="2.3" data-path="structure.html"><a href="structure.html#伺服器端程式-server-instruction"><i class="fa fa-check"></i><b>2.3</b> 伺服器端程式 (Server Instruction)</a></li>
-<li class="chapter" data-level="2.4" data-path="structure.html"><a href="structure.html#參考資料"><i class="fa fa-check"></i><b>2.4</b> 參考資料</a></li>
+<li class="chapter" data-level="2.4" data-path="structure.html"><a href="structure.html#script"><i class="fa fa-check"></i><b>2.4</b> 除了前後端以外的程式碼</a></li>
+<li class="chapter" data-level="2.5" data-path="structure.html"><a href="structure.html#參考資料"><i class="fa fa-check"></i><b>2.5</b> 參考資料</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="layout.html"><a href="layout.html"><i class="fa fa-check"></i><b>3</b> 版面設定</a><ul>
 <li class="chapter" data-level="3.1" data-path="layout.html"><a href="layout.html#頁面設定函數xxxpage"><i class="fa fa-check"></i><b>3.1</b> 頁面設定函數xxxPage()</a></li>
 <li class="chapter" data-level="3.2" data-path="layout.html"><a href="layout.html#xxxlayout-和-xxxpanel"><i class="fa fa-check"></i><b>3.2</b> xxxLayout() 和 xxxPanel()</a></li>
-<li class="chapter" data-level="3.3" data-path="layout.html"><a href="layout.html#參考資料-1"><i class="fa fa-check"></i><b>3.3</b> 參考資料</a></li>
+<li class="chapter" data-level="3.3" data-path="layout.html"><a href="layout.html#row"><i class="fa fa-check"></i><b>3.3</b> row 與 column</a></li>
+<li class="chapter" data-level="3.4" data-path="layout.html"><a href="layout.html#參考資料-1"><i class="fa fa-check"></i><b>3.4</b> 參考資料</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="input.html"><a href="input.html"><i class="fa fa-check"></i><b>4</b> 輸入Inputs</a><ul>
 <li class="chapter" data-level="4.1" data-path="input.html"><a href="input.html#參考資料-2"><i class="fa fa-check"></i><b>4.1</b> 參考資料</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="output.html"><a href="output.html"><i class="fa fa-check"></i><b>5</b> 輸出 Outputs</a><ul>
-<li class="chapter" data-level="5.1" data-path="output.html"><a href="output.html#參考資料-3"><i class="fa fa-check"></i><b>5.1</b> 參考資料</a></li>
+<li class="chapter" data-level="5.1" data-path="output.html"><a href="output.html#內建輸出元件"><i class="fa fa-check"></i><b>5.1</b> 內建輸出元件</a></li>
+<li class="chapter" data-level="5.2" data-path="output.html"><a href="output.html#其他常用輸出元件"><i class="fa fa-check"></i><b>5.2</b> 其他常用輸出元件</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="output.html"><a href="output.html#動態表格"><i class="fa fa-check"></i><b>5.2.1</b> 動態表格</a></li>
+<li class="chapter" data-level="5.2.2" data-path="output.html"><a href="output.html#動態地圖"><i class="fa fa-check"></i><b>5.2.2</b> 動態地圖</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="output.html"><a href="output.html#參考資料-3"><i class="fa fa-check"></i><b>5.3</b> 參考資料</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="server.html"><a href="server.html"><i class="fa fa-check"></i><b>6</b> 伺服器端程式 Server</a><ul>
 <li class="chapter" data-level="6.1" data-path="server.html"><a href="server.html#渲染函數-render-function"><i class="fa fa-check"></i><b>6.1</b> 渲染函數 Render function</a></li>
 <li class="chapter" data-level="6.2" data-path="server.html"><a href="server.html#反應函數-reactive-function"><i class="fa fa-check"></i><b>6.2</b> 反應函數 Reactive function</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="server.html"><a href="server.html#reactive"><i class="fa fa-check"></i><b>6.2.1</b> reactive()</a></li>
-<li class="chapter" data-level="6.2.2" data-path="server.html"><a href="server.html#isolate"><i class="fa fa-check"></i><b>6.2.2</b> isolate()</a></li>
-<li class="chapter" data-level="6.2.3" data-path="server.html"><a href="server.html#observeevent"><i class="fa fa-check"></i><b>6.2.3</b> observeEvent()</a></li>
-<li class="chapter" data-level="6.2.4" data-path="server.html"><a href="server.html#eventreactive"><i class="fa fa-check"></i><b>6.2.4</b> eventReactive()</a></li>
+<li class="chapter" data-level="6.2.1" data-path="server.html"><a href="server.html#反應函數-reactive"><i class="fa fa-check"></i><b>6.2.1</b> 反應函數 reactive()</a></li>
+<li class="chapter" data-level="6.2.2" data-path="server.html"><a href="server.html#不反應-isolate"><i class="fa fa-check"></i><b>6.2.2</b> 不反應 isolate()</a></li>
+<li class="chapter" data-level="6.2.3" data-path="server.html"><a href="server.html#按鈕觸發-observeevent"><i class="fa fa-check"></i><b>6.2.3</b> 按鈕觸發 observeEvent()</a></li>
+<li class="chapter" data-level="6.2.4" data-path="server.html"><a href="server.html#延遲反應-eventreactive"><i class="fa fa-check"></i><b>6.2.4</b> 延遲反應 eventReactive()</a></li>
+<li class="chapter" data-level="6.2.5" data-path="server.html"><a href="server.html#reactivevalues"><i class="fa fa-check"></i><b>6.2.5</b> reactiveValues()</a></li>
+<li class="chapter" data-level="6.2.6" data-path="server.html"><a href="server.html#reactivetimer"><i class="fa fa-check"></i><b>6.2.6</b> reactiveTimer()</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="server.html"><a href="server.html#參考資料-4"><i class="fa fa-check"></i><b>6.3</b> 參考資料</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="script.html"><a href="script.html"><i class="fa fa-check"></i><b>7</b> 其他程式碼</a><ul>
-<li class="chapter" data-level="7.1" data-path="script.html"><a href="script.html#參考資料-5"><i class="fa fa-check"></i><b>7.1</b> 參考資料</a></li>
-</ul></li>
+<li class="chapter" data-level="7" data-path="deploy.html"><a href="deploy.html"><i class="fa fa-check"></i><b>7</b> 將Shiny App上線</a></li>
+<li class="part"><span><b>II 進階內容</b></span></li>
 <li class="chapter" data-level="8" data-path="design.html"><a href="design.html"><i class="fa fa-check"></i><b>8</b> 客製化使用者介面</a><ul>
-<li class="chapter" data-level="8.1" data-path="design.html"><a href="design.html#section"><i class="fa fa-check"></i><b>8.1</b> </a></li>
-<li class="chapter" data-level="8.2" data-path="design.html"><a href="design.html#html-101"><i class="fa fa-check"></i><b>8.2</b> HTML 101</a></li>
-<li class="chapter" data-level="8.3" data-path="design.html"><a href="design.html#r---html"><i class="fa fa-check"></i><b>8.3</b> R -&gt; HTML</a></li>
-<li class="chapter" data-level="8.4" data-path="design.html"><a href="design.html#html-ui"><i class="fa fa-check"></i><b>8.4</b> HTML UI</a></li>
-<li class="chapter" data-level="8.5" data-path="design.html"><a href="design.html#css"><i class="fa fa-check"></i><b>8.5</b> CSS</a></li>
-<li class="chapter" data-level="8.6" data-path="design.html"><a href="design.html#bootstrap"><i class="fa fa-check"></i><b>8.6</b> Bootstrap</a></li>
-<li class="chapter" data-level="8.7" data-path="design.html"><a href="design.html#sass"><i class="fa fa-check"></i><b>8.7</b> Sass</a></li>
-<li class="chapter" data-level="8.8" data-path="design.html"><a href="design.html#參考資料-6"><i class="fa fa-check"></i><b>8.8</b> 參考資料</a></li>
+<li class="chapter" data-level="8.1" data-path="design.html"><a href="design.html#樣式模板"><i class="fa fa-check"></i><b>8.1</b> 樣式模板</a></li>
+<li class="chapter" data-level="8.2" data-path="design.html"><a href="design.html#r---html"><i class="fa fa-check"></i><b>8.2</b> R -&gt; HTML</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="design.html"><a href="design.html#html-101"><i class="fa fa-check"></i><b>8.2.1</b> HTML 101</a></li>
+<li class="chapter" data-level="8.2.2" data-path="design.html"><a href="design.html#在r中撰寫html"><i class="fa fa-check"></i><b>8.2.2</b> 在R中撰寫HTML</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>9</b> 介面與效能測試</a><ul>
-<li class="chapter" data-level="9.1" data-path="test.html"><a href="test.html#效能測試"><i class="fa fa-check"></i><b>9.1</b> 效能測試</a><ul>
-<li class="chapter" data-level="9.1.1" data-path="test.html"><a href="test.html#基準測試-benchmark"><i class="fa fa-check"></i><b>9.1.1</b> 基準測試 Benchmark</a></li>
-<li class="chapter" data-level="9.1.2" data-path="test.html"><a href="test.html#效能分析-analyze"><i class="fa fa-check"></i><b>9.1.2</b> 效能分析 Analyze</a></li>
-<li class="chapter" data-level="9.1.3" data-path="test.html"><a href="test.html#程式最佳化-optimize"><i class="fa fa-check"></i><b>9.1.3</b> 程式最佳化 Optimize</a></li>
+<li class="chapter" data-level="8.3" data-path="design.html"><a href="design.html#css"><i class="fa fa-check"></i><b>8.3</b> CSS</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="design.html"><a href="design.html#bootstrap-and-sass"><i class="fa fa-check"></i><b>8.3.1</b> Bootstrap and Sass</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="test.html"><a href="test.html#參考資料-7"><i class="fa fa-check"></i><b>9.2</b> 參考資料</a></li>
+<li class="chapter" data-level="8.4" data-path="design.html"><a href="design.html#參考資料-5"><i class="fa fa-check"></i><b>8.4</b> 參考資料</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="deploy.html"><a href="deploy.html"><i class="fa fa-check"></i><b>10</b> 將Shiny App上線</a></li>
-<li class="chapter" data-level="11" data-path="dashboard.html"><a href="dashboard.html"><i class="fa fa-check"></i><b>11</b> 儀表板</a></li>
-<li class="chapter" data-level="12" data-path="js.html"><a href="js.html"><i class="fa fa-check"></i><b>12</b> 客製化使用者介面</a></li>
+<li class="chapter" data-level="9" data-path="dashboard.html"><a href="dashboard.html"><i class="fa fa-check"></i><b>9</b> 儀表板</a><ul>
+<li class="chapter" data-level="9.1" data-path="dashboard.html"><a href="dashboard.html#開發儀表板步驟"><i class="fa fa-check"></i><b>9.1</b> 開發儀表板步驟</a></li>
+<li class="chapter" data-level="9.2" data-path="dashboard.html"><a href="dashboard.html#儀表板樣式設計"><i class="fa fa-check"></i><b>9.2</b> 儀表板樣式設計</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="dashboard.html"><a href="dashboard.html#dashboardpage"><i class="fa fa-check"></i><b>9.2.1</b> dashboardPage()</a></li>
+<li class="chapter" data-level="9.2.2" data-path="dashboard.html"><a href="dashboard.html#標頭"><i class="fa fa-check"></i><b>9.2.2</b> 標頭</a></li>
+<li class="chapter" data-level="9.2.3" data-path="dashboard.html"><a href="dashboard.html#側邊欄位"><i class="fa fa-check"></i><b>9.2.3</b> 側邊欄位</a></li>
+<li class="chapter" data-level="9.2.4" data-path="dashboard.html"><a href="dashboard.html#主頁面"><i class="fa fa-check"></i><b>9.2.4</b> 主頁面</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="dashboard.html"><a href="dashboard.html#參考資料-6"><i class="fa fa-check"></i><b>9.3</b> 參考資料</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="covid19.html"><a href="covid19.html"><i class="fa fa-check"></i><b>10</b> 新冠肺炎儀表板範例</a></li>
+<li class="chapter" data-level="11" data-path="js.html"><a href="js.html"><i class="fa fa-check"></i><b>11</b> 客製化使用者介面</a><ul>
+<li class="chapter" data-level="11.1" data-path="js.html"><a href="js.html#d3.js"><i class="fa fa-check"></i><b>11.1</b> D3.js</a></li>
+<li class="chapter" data-level="11.2" data-path="js.html"><a href="js.html#javascript"><i class="fa fa-check"></i><b>11.2</b> JavaScript</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>12</b> 介面與效能測試</a><ul>
+<li class="chapter" data-level="12.1" data-path="test.html"><a href="test.html#介面測試"><i class="fa fa-check"></i><b>12.1</b> 介面測試</a></li>
+<li class="chapter" data-level="12.2" data-path="test.html"><a href="test.html#效能測試"><i class="fa fa-check"></i><b>12.2</b> 效能測試</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="test.html"><a href="test.html#基準測試-benchmark"><i class="fa fa-check"></i><b>12.2.1</b> 基準測試 Benchmark</a></li>
+<li class="chapter" data-level="12.2.2" data-path="test.html"><a href="test.html#效能分析-analyze"><i class="fa fa-check"></i><b>12.2.2</b> 效能分析 Analyze</a></li>
+<li class="chapter" data-level="12.2.3" data-path="test.html"><a href="test.html#程式最佳化-optimize"><i class="fa fa-check"></i><b>12.2.3</b> 程式最佳化 Optimize</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="test.html"><a href="test.html#參考資料-7"><i class="fa fa-check"></i><b>12.3</b> 參考資料</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="author.html"><a href="author.html"><i class="fa fa-check"></i>作者資訊</a></li>
 <li class="chapter" data-level="" data-path="-8.html"><a href="-8.html"><i class="fa fa-check"></i>參考資料</a></li>
 <li class="divider"></li>
@@ -207,19 +238,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="test" class="section level1">
-<h1><span class="header-section-number">Ch 9</span> 介面與效能測試</h1>
-<p><strong>撰寫中</strong>
-## 介面測試</p>
+<h1><span class="header-section-number">Ch 12</span> 介面與效能測試</h1>
+<p><strong>撰寫中</strong></p>
+<div id="介面測試" class="section level2">
+<h2><span class="header-section-number">12.1</span> 介面測試</h2>
 <p>shinytest</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">library</span>(devtools)</a>
-<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="kw">install_github</span>(<span class="st">&quot;rstudio/shinytest&quot;</span>)</a>
-<a class="sourceLine" id="cb6-3" data-line-number="3">shinytest<span class="op">::</span><span class="kw">installDependencies</span>()</a></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">library</span>(shinytest)</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="co"># Launch the target app (replace with the correct path)</span></a>
-<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="kw">recordTest</span>(<span class="st">&quot;path/to/app&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb64-1" data-line-number="1"><span class="kw">library</span>(devtools)</a>
+<a class="sourceLine" id="cb64-2" data-line-number="2"><span class="kw">install_github</span>(<span class="st">&quot;rstudio/shinytest&quot;</span>)</a>
+<a class="sourceLine" id="cb64-3" data-line-number="3">shinytest<span class="op">::</span><span class="kw">installDependencies</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" data-line-number="1"><span class="kw">library</span>(shinytest)</a>
+<a class="sourceLine" id="cb65-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb65-3" data-line-number="3"><span class="co"># Launch the target app (replace with the correct path)</span></a>
+<a class="sourceLine" id="cb65-4" data-line-number="4"><span class="kw">recordTest</span>(<span class="st">&quot;path/to/app&quot;</span>)</a></code></pre></div>
+</div>
 <div id="效能測試" class="section level2">
-<h2><span class="header-section-number">9.1</span> 效能測試</h2>
+<h2><span class="header-section-number">12.2</span> 效能測試</h2>
 <p>Shiny App的效能測試通常是<strong>基準測試 Benchmark</strong>、<strong>效能分析 Analyze</strong>、<strong>建議解決方案 Recommend</strong>、<strong>程式最佳化 Optimize</strong>四個步驟的循環 ( <a href="https://tailrecursion.com/slides/fast-shiny/" target="_blank">參考資料</a> ):</p>
 <ol style="list-style-type: decimal">
 <li><strong>基準測試 Benchmark</strong>: 以一般使用者的使用方式測試系統，如果感覺不夠快，就進到下一步。若想測試多人同時使用的情境，可使用<code>shinyloadtest</code>套件<span class="citation">(Dipert, Schloerke, and Borges <a href="#ref-R-shinyloadtest">2020</a>)</span>進行測試</li>
@@ -236,7 +269,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>完成測試後，就能將Shiny App正式部屬(Deploy)上線。</p>
 <div id="基準測試-benchmark" class="section level3">
-<h3><span class="header-section-number">9.1.1</span> 基準測試 Benchmark</h3>
+<h3><span class="header-section-number">12.2.1</span> 基準測試 Benchmark</h3>
 <p>run app
 record
 playback
@@ -244,21 +277,21 @@ analyze</p>
 <p>要開兩個R session，第一個session跑Shiny App，第二個session跑shinyloadtest</p>
 </div>
 <div id="效能分析-analyze" class="section level3">
-<h3><span class="header-section-number">9.1.2</span> 效能分析 Analyze</h3>
+<h3><span class="header-section-number">12.2.2</span> 效能分析 Analyze</h3>
 <p>profiling</p>
 <p>花時間的程式碼，如讀檔，grouping，aggregation等，可以在Shiny App執行前就將檔案準備好，例如把可以先跑的程式碼寫在獨立的R Script中，用排程的方式已固定的頻率重新執行，以更新資料</p>
 </div>
 <div id="程式最佳化-optimize" class="section level3">
-<h3><span class="header-section-number">9.1.3</span> 程式最佳化 Optimize</h3>
+<h3><span class="header-section-number">12.2.3</span> 程式最佳化 Optimize</h3>
 <p>plot caching
 畫圖很慢
 有一些圖是蠻多使用者在使用Shiny App的時候會得到的輸出結果</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">renderCachedPlot</span>({</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2">  </a>
-<a class="sourceLine" id="cb8-3" data-line-number="3">},<span class="dt">cacheKeyExpr =</span> {</a>
-<a class="sourceLine" id="cb8-4" data-line-number="4">  </a>
-<a class="sourceLine" id="cb8-5" data-line-number="5">})</a>
-<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="kw">renderPlot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb66-1" data-line-number="1"><span class="kw">renderCachedPlot</span>({</a>
+<a class="sourceLine" id="cb66-2" data-line-number="2">  </a>
+<a class="sourceLine" id="cb66-3" data-line-number="3">},<span class="dt">cacheKeyExpr =</span> {</a>
+<a class="sourceLine" id="cb66-4" data-line-number="4">  </a>
+<a class="sourceLine" id="cb66-5" data-line-number="5">})</a>
+<a class="sourceLine" id="cb66-6" data-line-number="6"><span class="kw">renderPlot</span>()</a></code></pre></div>
 <p>shinyloadtest
 profvis</p>
 <p>Async</p>
@@ -267,7 +300,7 @@ profvis</p>
 </div>
 </div>
 <div id="參考資料-7" class="section level2">
-<h2><span class="header-section-number">9.2</span> 參考資料</h2>
+<h2><span class="header-section-number">12.3</span> 參考資料</h2>
 <ul>
 <li><a href="https://rstudio.github.io/shinytest/articles/shinytest.html" target="_blank">Getting started with shinytest</a></li>
 <li><a href="http://bit.ly/shiny-prod-book" target="_blank">Shiny in Production</a></li>
@@ -290,8 +323,8 @@ profvis</p>
           </div>
         </div>
       </div>
-<a href="design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="deploy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="js.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="author.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
