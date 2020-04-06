@@ -24,7 +24,7 @@
 <meta name="author" content="曾意儒 Yi-Ju Tseng" />
 
 
-<meta name="date" content="2020-03-28" />
+<meta name="date" content="2020-04-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -168,7 +168,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="server.html"><a href="server.html"><i class="fa fa-check"></i><b>6</b> 伺服器端程式 Server</a><ul>
 <li class="chapter" data-level="6.1" data-path="server.html"><a href="server.html#渲染函數-render-function"><i class="fa fa-check"></i><b>6.1</b> 渲染函數 Render function</a></li>
-<li class="chapter" data-level="6.2" data-path="server.html"><a href="server.html#反應函數-reactive-function"><i class="fa fa-check"></i><b>6.2</b> 反應函數 Reactive function</a><ul>
+<li class="chapter" data-level="6.2" data-path="server.html"><a href="server.html#reactive"><i class="fa fa-check"></i><b>6.2</b> 反應函數 Reactive function</a><ul>
 <li class="chapter" data-level="6.2.1" data-path="server.html"><a href="server.html#反應函數-reactive"><i class="fa fa-check"></i><b>6.2.1</b> 反應函數 reactive()</a></li>
 <li class="chapter" data-level="6.2.2" data-path="server.html"><a href="server.html#不反應-isolate"><i class="fa fa-check"></i><b>6.2.2</b> 不反應 isolate()</a></li>
 <li class="chapter" data-level="6.2.3" data-path="server.html"><a href="server.html#按鈕觸發-observeevent"><i class="fa fa-check"></i><b>6.2.3</b> 按鈕觸發 observeEvent()</a></li>
@@ -201,7 +201,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="9.3" data-path="dashboard.html"><a href="dashboard.html#參考資料-6"><i class="fa fa-check"></i><b>9.3</b> 參考資料</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="covid19.html"><a href="covid19.html"><i class="fa fa-check"></i><b>10</b> 新冠肺炎儀表板範例</a></li>
+<li class="chapter" data-level="10" data-path="covid19.html"><a href="covid19.html"><i class="fa fa-check"></i><b>10</b> 新冠肺炎儀表板範例</a><ul>
+<li class="chapter" data-level="10.1" data-path="covid19.html"><a href="covid19.html#儀表板主要架構"><i class="fa fa-check"></i><b>10.1</b> 儀表板主要架構</a></li>
+<li class="chapter" data-level="10.2" data-path="covid19.html"><a href="covid19.html#流行地圖-ui"><i class="fa fa-check"></i><b>10.2</b> 流行地圖 UI</a></li>
+<li class="chapter" data-level="10.3" data-path="covid19.html"><a href="covid19.html#各國圖表-ui"><i class="fa fa-check"></i><b>10.3</b> 各國圖表 UI</a></li>
+<li class="chapter" data-level="10.4" data-path="covid19.html"><a href="covid19.html#伺服器端程式"><i class="fa fa-check"></i><b>10.4</b> 伺服器端程式</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="covid19.html"><a href="covid19.html#ui文字設定"><i class="fa fa-check"></i><b>10.4.1</b> UI文字設定</a></li>
+<li class="chapter" data-level="10.4.2" data-path="covid19.html"><a href="covid19.html#ui圖表設定"><i class="fa fa-check"></i><b>10.4.2</b> UI圖表設定</a></li>
+<li class="chapter" data-level="10.4.3" data-path="covid19.html"><a href="covid19.html#更新圖片的反應函數"><i class="fa fa-check"></i><b>10.4.3</b> 更新圖片的反應函數</a></li>
+<li class="chapter" data-level="10.4.4" data-path="covid19.html"><a href="covid19.html#更新資料的反應函數"><i class="fa fa-check"></i><b>10.4.4</b> 更新資料的反應函數</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="covid19.html"><a href="covid19.html#資料整理獨立程式碼"><i class="fa fa-check"></i><b>10.5</b> 資料整理獨立程式碼</a></li>
+</ul></li>
 <li class="chapter" data-level="11" data-path="js.html"><a href="js.html"><i class="fa fa-check"></i><b>11</b> 客製化使用者介面</a><ul>
 <li class="chapter" data-level="11.1" data-path="js.html"><a href="js.html#d3.js"><i class="fa fa-check"></i><b>11.1</b> D3.js</a></li>
 <li class="chapter" data-level="11.2" data-path="js.html"><a href="js.html#javascript"><i class="fa fa-check"></i><b>11.2</b> JavaScript</a></li>
@@ -314,8 +325,8 @@ leafletjs
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="kw">library</span>(leaflet)</a>
 <a class="sourceLine" id="cb26-2" data-line-number="2"><span class="kw">leaflet</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">addTiles</span>() <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb26-3" data-line-number="3"><span class="st">  </span><span class="kw">setView</span>(<span class="fl">121.388396</span>, <span class="fl">25.034548</span>, <span class="dt">zoom=</span><span class="dv">17</span>)</a></code></pre></div>
-<div id="htmlwidget-e92b671445e1d9f74381" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e92b671445e1d9f74381">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[25.034548,121.388396],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-13dc0bacbb960b633ce0" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-13dc0bacbb960b633ce0">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[25.034548,121.388396],17,[]]},"evals":[],"jsHooks":[]}</script>
 <p>在Shiny App/Dashboard 使用 leaflet 地圖</p>
 </div>
 </div>

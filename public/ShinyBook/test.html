@@ -24,7 +24,7 @@
 <meta name="author" content="曾意儒 Yi-Ju Tseng" />
 
 
-<meta name="date" content="2020-03-28" />
+<meta name="date" content="2020-04-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -168,7 +168,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="server.html"><a href="server.html"><i class="fa fa-check"></i><b>6</b> 伺服器端程式 Server</a><ul>
 <li class="chapter" data-level="6.1" data-path="server.html"><a href="server.html#渲染函數-render-function"><i class="fa fa-check"></i><b>6.1</b> 渲染函數 Render function</a></li>
-<li class="chapter" data-level="6.2" data-path="server.html"><a href="server.html#反應函數-reactive-function"><i class="fa fa-check"></i><b>6.2</b> 反應函數 Reactive function</a><ul>
+<li class="chapter" data-level="6.2" data-path="server.html"><a href="server.html#reactive"><i class="fa fa-check"></i><b>6.2</b> 反應函數 Reactive function</a><ul>
 <li class="chapter" data-level="6.2.1" data-path="server.html"><a href="server.html#反應函數-reactive"><i class="fa fa-check"></i><b>6.2.1</b> 反應函數 reactive()</a></li>
 <li class="chapter" data-level="6.2.2" data-path="server.html"><a href="server.html#不反應-isolate"><i class="fa fa-check"></i><b>6.2.2</b> 不反應 isolate()</a></li>
 <li class="chapter" data-level="6.2.3" data-path="server.html"><a href="server.html#按鈕觸發-observeevent"><i class="fa fa-check"></i><b>6.2.3</b> 按鈕觸發 observeEvent()</a></li>
@@ -201,7 +201,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="9.3" data-path="dashboard.html"><a href="dashboard.html#參考資料-6"><i class="fa fa-check"></i><b>9.3</b> 參考資料</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="covid19.html"><a href="covid19.html"><i class="fa fa-check"></i><b>10</b> 新冠肺炎儀表板範例</a></li>
+<li class="chapter" data-level="10" data-path="covid19.html"><a href="covid19.html"><i class="fa fa-check"></i><b>10</b> 新冠肺炎儀表板範例</a><ul>
+<li class="chapter" data-level="10.1" data-path="covid19.html"><a href="covid19.html#儀表板主要架構"><i class="fa fa-check"></i><b>10.1</b> 儀表板主要架構</a></li>
+<li class="chapter" data-level="10.2" data-path="covid19.html"><a href="covid19.html#流行地圖-ui"><i class="fa fa-check"></i><b>10.2</b> 流行地圖 UI</a></li>
+<li class="chapter" data-level="10.3" data-path="covid19.html"><a href="covid19.html#各國圖表-ui"><i class="fa fa-check"></i><b>10.3</b> 各國圖表 UI</a></li>
+<li class="chapter" data-level="10.4" data-path="covid19.html"><a href="covid19.html#伺服器端程式"><i class="fa fa-check"></i><b>10.4</b> 伺服器端程式</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="covid19.html"><a href="covid19.html#ui文字設定"><i class="fa fa-check"></i><b>10.4.1</b> UI文字設定</a></li>
+<li class="chapter" data-level="10.4.2" data-path="covid19.html"><a href="covid19.html#ui圖表設定"><i class="fa fa-check"></i><b>10.4.2</b> UI圖表設定</a></li>
+<li class="chapter" data-level="10.4.3" data-path="covid19.html"><a href="covid19.html#更新圖片的反應函數"><i class="fa fa-check"></i><b>10.4.3</b> 更新圖片的反應函數</a></li>
+<li class="chapter" data-level="10.4.4" data-path="covid19.html"><a href="covid19.html#更新資料的反應函數"><i class="fa fa-check"></i><b>10.4.4</b> 更新資料的反應函數</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="covid19.html"><a href="covid19.html#資料整理獨立程式碼"><i class="fa fa-check"></i><b>10.5</b> 資料整理獨立程式碼</a></li>
+</ul></li>
 <li class="chapter" data-level="11" data-path="js.html"><a href="js.html"><i class="fa fa-check"></i><b>11</b> 客製化使用者介面</a><ul>
 <li class="chapter" data-level="11.1" data-path="js.html"><a href="js.html#d3.js"><i class="fa fa-check"></i><b>11.1</b> D3.js</a></li>
 <li class="chapter" data-level="11.2" data-path="js.html"><a href="js.html#javascript"><i class="fa fa-check"></i><b>11.2</b> JavaScript</a></li>
@@ -243,13 +254,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="介面測試" class="section level2">
 <h2><span class="header-section-number">12.1</span> 介面測試</h2>
 <p>shinytest</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb64-1" data-line-number="1"><span class="kw">library</span>(devtools)</a>
-<a class="sourceLine" id="cb64-2" data-line-number="2"><span class="kw">install_github</span>(<span class="st">&quot;rstudio/shinytest&quot;</span>)</a>
-<a class="sourceLine" id="cb64-3" data-line-number="3">shinytest<span class="op">::</span><span class="kw">installDependencies</span>()</a></code></pre></div>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" data-line-number="1"><span class="kw">library</span>(shinytest)</a>
-<a class="sourceLine" id="cb65-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb65-3" data-line-number="3"><span class="co"># Launch the target app (replace with the correct path)</span></a>
-<a class="sourceLine" id="cb65-4" data-line-number="4"><span class="kw">recordTest</span>(<span class="st">&quot;path/to/app&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb79-1" data-line-number="1"><span class="kw">library</span>(devtools)</a>
+<a class="sourceLine" id="cb79-2" data-line-number="2"><span class="kw">install_github</span>(<span class="st">&quot;rstudio/shinytest&quot;</span>)</a>
+<a class="sourceLine" id="cb79-3" data-line-number="3">shinytest<span class="op">::</span><span class="kw">installDependencies</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb80-1" data-line-number="1"><span class="kw">library</span>(shinytest)</a>
+<a class="sourceLine" id="cb80-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb80-3" data-line-number="3"><span class="co"># Launch the target app (replace with the correct path)</span></a>
+<a class="sourceLine" id="cb80-4" data-line-number="4"><span class="kw">recordTest</span>(<span class="st">&quot;path/to/app&quot;</span>)</a></code></pre></div>
 </div>
 <div id="效能測試" class="section level2">
 <h2><span class="header-section-number">12.2</span> 效能測試</h2>
@@ -286,12 +297,12 @@ analyze</p>
 <p>plot caching
 畫圖很慢
 有一些圖是蠻多使用者在使用Shiny App的時候會得到的輸出結果</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb66-1" data-line-number="1"><span class="kw">renderCachedPlot</span>({</a>
-<a class="sourceLine" id="cb66-2" data-line-number="2">  </a>
-<a class="sourceLine" id="cb66-3" data-line-number="3">},<span class="dt">cacheKeyExpr =</span> {</a>
-<a class="sourceLine" id="cb66-4" data-line-number="4">  </a>
-<a class="sourceLine" id="cb66-5" data-line-number="5">})</a>
-<a class="sourceLine" id="cb66-6" data-line-number="6"><span class="kw">renderPlot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb81-1" data-line-number="1"><span class="kw">renderCachedPlot</span>({</a>
+<a class="sourceLine" id="cb81-2" data-line-number="2">  </a>
+<a class="sourceLine" id="cb81-3" data-line-number="3">},<span class="dt">cacheKeyExpr =</span> {</a>
+<a class="sourceLine" id="cb81-4" data-line-number="4">  </a>
+<a class="sourceLine" id="cb81-5" data-line-number="5">})</a>
+<a class="sourceLine" id="cb81-6" data-line-number="6"><span class="kw">renderPlot</span>()</a></code></pre></div>
 <p>shinyloadtest
 profvis</p>
 <p>Async</p>
