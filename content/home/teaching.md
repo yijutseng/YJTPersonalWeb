@@ -20,6 +20,7 @@ weight = 60
         - [數位學習影片](https://www.youtube.com/channel/UC2ZZMRLibtq2fD-la4YV_nA)
         - [數位學習影片-播放清單](http://yijutseng.github.io/DataScienceRBook/video.html#video)
         - [資料科學與R語言 電子書](http://yijutseng.github.io/DataScienceRBook/)
+        - [使用R Shiny設計資料科學應用程式 電子書](https://yjtseng.info/shinybook/)
 
 - Graduated Level
     - 醫學資訊 Medical Informatics 
@@ -27,4 +28,4 @@ weight = 60
 - EMBA
     - 巨量資料產業實務個案 Big Data Practices in Industries 
 
-For more infomation, please visit [Digital Health Lab](https://dhlab-cgu.github.io/#course)
+For more infomation, please visit [Digital Health Lab](https://dhlab-tseng.github.io/#course)

@@ -124,7 +124,7 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "users"
     icon_pack = "fa"
-    link = "https://dhlab-cgu.github.io/"
+    link = "https://dhlab-tseng.github.io/"
 
   [[params.social]]
     icon = "linkedin"
