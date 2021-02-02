@@ -35,5 +35,11 @@ experience:
     location: Taoyuan, Taiwan
     date_start: '2016-02-01'
     date_end: '2021-01-31'
-
+    
+  - title: Associate Professor
+    company: National Central University
+    company_url: ''
+    location: Taoyuan, Taiwan
+    date_start: '2021-02-01'
+    date_end: ''
 ---
