@@ -1,18 +1,21 @@
-+++
-# Contact widget.
+---
+# An instance of the Contact widget.
+# Documentation: https://sourcethemes.com/academic/docs/page-builder/
+widget: contact
 
-date = "2017-08-18T00:00:00"
-draft = false
+# This file represents a page section.
+headless: true
 
-title = "Contact"
-subtitle = ""
-widget = "contact"
+# Order that this section appears on the page.
+weight: 130
 
-# Order that this section will appear in.
-weight = 80
+title: Contact
+subtitle:
 
-# Automatically link email and phone?
-autolink = false
-
-+++
-
+content:
+  # Automatically link email and phone or display as text?
+  autolink: false
+  
+design:
+  columns: '2'
+---
