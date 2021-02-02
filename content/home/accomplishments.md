@@ -27,9 +27,25 @@ item:
   date_end: ""
   date_start: "2018-02-01"
   description: ""
-  organization: MOST, Taiwan
+  organization: Ministry of Science and Technology, Taiwan
   organization_url: https://www.most.gov.tw/
   title: MOST Young Scholar Fellowship
   url: ""
-
+- certificate_url: ""
+  date_end: ""
+  date_start: "2018-08-01"
+  description: ""
+  organization: Chang Gung University, Taiwan
+  organization_url: 
+  title: Research Excellence Award
+  url: ""
+- certificate_url: ""
+  date_end: ""
+  date_start: "2016-08-01"
+  date_end: "2021-01-31"
+  description: ""
+  organization: Ministry of Science and Technology, Taiwan
+  organization_url: https://www.most.gov.tw/
+  title: Special Outstanding Talent Award
+  url: ""
 ---
