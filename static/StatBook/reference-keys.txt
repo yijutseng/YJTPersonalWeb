@@ -1,0 +1,15 @@
+basicR
+install-and-load-packages
+assign-variable
+function
+arithmetical-operation
+sampling-distribution
+estimation
+test-of-hypotheses
+analysis-of-variance
+sampling
+simple-random-sampling
+stratified-sampling
+statistic-with-r
+sampling-distribution-1
+sampling-distribution-of-the-sample-mean
