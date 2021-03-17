@@ -13,3 +13,8 @@ stratified-sampling
 statistic-with-r
 sampling-distribution-1
 sampling-distribution-of-the-sample-mean
+sampling-distribution-of-the-sample-propotion
+sampling-distribution-of-the-sample-variance
+confidence-interval
+z-distribution
+t-distribution
