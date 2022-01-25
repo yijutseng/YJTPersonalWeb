@@ -138,6 +138,9 @@
 
 - id: contact_message
   translation: Message
+  
+- id: contact_attachment
+  translation: Attach file
 
 - id: contact_send
   translation: Send
@@ -216,7 +219,7 @@
 
 - id: slides
   translation: Slides
-  
+
 - id: authors
   translation: Authors
 
@@ -255,3 +258,8 @@
 
 - id: cookie_learn
   translation: Learn more
+
+# Published with
+
+- id: published_with
+  translation: Published with {wowchemy} — the free, {repo_link}open source{/repo_link} website builder that empowers creators.

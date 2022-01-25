@@ -88,18 +88,18 @@ show_related = {book = true, page = false, post = true, project = true, publicat
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "yjtseng.info [at] gmail.com"
+email = "yijutseng [at] cs.nycu.edu.tw"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-# address = {street = "450 Serra Mall", city = "Stanford", region = "CA", postcode = "94305", country = "United States", country_code = "US"}
+# address = {street = "1001 Ta Hsueh Rd.", city = "Hsinchu", postcode = "300", country = "Taiwan", country_code = "TW"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
 # coordinates = {latitude = "37.4275", longitude = "-122.1697"}
 
 # Directions for visitors to locate you.
-directions = "中央大學志希館九樓917"
+directions = "國立陽明交通大學工程三館422"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.

@@ -1,14 +1,13 @@
 /*************************************************
  *  Wowchemy
- *  https://github.com/wowchemy/wowchemy-hugo-modules
+ *  https://github.com/wowchemy/wowchemy-hugo-themes
  *
  *  Core JS functions and initialization.
  **************************************************/
 
+import mediumZoom from './_vendor/medium-zoom.esm';
 import {hugoEnvironment, codeHighlighting, searchEnabled} from '@params';
-
-import {fixMermaid} from './wowchemy-utils';
-
+import {scrollParentToChild} from './wowchemy-utils';
 import {
   changeThemeModeClick,
   initThemeVariation,
@@ -24,19 +23,20 @@ console.debug(`Environment: ${hugoEnvironment}`);
 
 // Dynamically get responsive navigation bar height for offsetting Scrollspy.
 function getNavBarHeight() {
-  let $navbar = $('#navbar-main');
-  let navbar_offset = $navbar.outerHeight();
-  console.debug('Navbar height: ' + navbar_offset);
-  return navbar_offset;
+  let navbar = document.getElementById('navbar-main');
+  let navbarHeight = navbar ? navbar.getBoundingClientRect().height : 0;
+  console.debug('Navbar height: ' + navbarHeight);
+  return navbarHeight;
 }
 
 /**
  * Responsive hash scrolling.
  * Check for a URL hash as an anchor.
- * If it exists on current page, scroll to it responsively.
+ * If page anchor matches hash, scroll to it responsively considering dynamic height elements.
  * If `target` argument omitted (e.g. after event), assume it's the window's hash.
+ * Default to 0ms animation duration as don't want animation for fixing scrollspy Book page ToC highlighting.
  */
-function scrollToAnchor(target, duration = 600) {
+function scrollToAnchor(target, duration = 0) {
   // If `target` is undefined or HashChangeEvent object, set it to window's hash.
   // Decode the hash as browsers can encode non-ASCII characters (e.g. Chinese symbols).
   target =
@@ -130,194 +130,6 @@ $(document).on('click', '.navbar-collapse.show', function (e) {
 });
 
 /* ---------------------------------------------------------------------------
- * Filter publications.
- * --------------------------------------------------------------------------- */
-
-// Active publication filters.
-let pubFilters = {};
-
-// Search term.
-let searchRegex;
-
-// Filter values (concatenated).
-let filterValues;
-
-// Publication container.
-let $grid_pubs = $('#container-publications');
-
-// Initialise Isotope publication layout if required.
-if ($grid_pubs.length) {
-  $grid_pubs.isotope({
-    itemSelector: '.isotope-item',
-    percentPosition: true,
-    masonry: {
-      // Use Bootstrap compatible grid layout.
-      columnWidth: '.grid-sizer',
-    },
-    filter: function () {
-      let $this = $(this);
-      let searchResults = searchRegex ? $this.text().match(searchRegex) : true;
-      let filterResults = filterValues ? $this.is(filterValues) : true;
-      return searchResults && filterResults;
-    },
-  });
-
-  // Filter by search term.
-  let $quickSearch = $('.filter-search').keyup(
-    debounce(function () {
-      searchRegex = new RegExp($quickSearch.val(), 'gi');
-      $grid_pubs.isotope();
-    }),
-  );
-
-  $('.pub-filters').on('change', function () {
-    let $this = $(this);
-
-    // Get group key.
-    let filterGroup = $this[0].getAttribute('data-filter-group');
-
-    // Set filter for group.
-    pubFilters[filterGroup] = this.value;
-
-    // Combine filters.
-    filterValues = concatValues(pubFilters);
-
-    // Activate filters.
-    $grid_pubs.isotope();
-
-    // If filtering by publication type, update the URL hash to enable direct linking to results.
-    if (filterGroup === 'pubtype') {
-      // Set hash URL to current filter.
-      let url = $(this).val();
-      if (url.substr(0, 9) === '.pubtype-') {
-        window.location.hash = url.substr(9);
-      } else {
-        window.location.hash = '';
-      }
-    }
-  });
-}
-
-// Debounce input to prevent spamming filter requests.
-function debounce(fn, threshold) {
-  let timeout;
-  threshold = threshold || 100;
-  return function debounced() {
-    clearTimeout(timeout);
-    let args = arguments;
-    let _this = this;
-
-    function delayed() {
-      fn.apply(_this, args);
-    }
-
-    timeout = setTimeout(delayed, threshold);
-  };
-}
-
-// Flatten object by concatenating values.
-function concatValues(obj) {
-  let value = '';
-  for (let prop in obj) {
-    value += obj[prop];
-  }
-  return value;
-}
-
-// Filter publications according to hash in URL.
-function filter_publications() {
-  // Check for Isotope publication layout.
-  if (!$grid_pubs.length) return;
-
-  let urlHash = window.location.hash.replace('#', '');
-  let filterValue = '*';
-
-  // Check if hash is numeric.
-  if (urlHash != '' && !isNaN(urlHash)) {
-    filterValue = '.pubtype-' + urlHash;
-  }
-
-  // Set filter.
-  let filterGroup = 'pubtype';
-  pubFilters[filterGroup] = filterValue;
-  filterValues = concatValues(pubFilters);
-
-  // Activate filters.
-  $grid_pubs.isotope();
-
-  // Set selected option.
-  $('.pubtype-select').val(filterValue);
-}
-
-/* ---------------------------------------------------------------------------
- * Google Maps or OpenStreetMap via Leaflet.
- * --------------------------------------------------------------------------- */
-
-function initMap() {
-  if ($('#map').length) {
-    let map_provider = $('#map-provider').val();
-    let lat = $('#map-lat').val();
-    let lng = $('#map-lng').val();
-    let zoom = parseInt($('#map-zoom').val());
-    let address = $('#map-dir').val();
-    let api_key = $('#map-api-key').val();
-
-    if (map_provider == 1) {
-      let map = new GMaps({
-        div: '#map',
-        lat: lat,
-        lng: lng,
-        zoom: zoom,
-        zoomControl: true,
-        zoomControlOpt: {
-          style: 'SMALL',
-          position: 'TOP_LEFT',
-        },
-        streetViewControl: false,
-        mapTypeControl: false,
-        gestureHandling: 'cooperative',
-      });
-
-      map.addMarker({
-        lat: lat,
-        lng: lng,
-        click: function () {
-          let url = 'https://www.google.com/maps/place/' + encodeURIComponent(address) + '/@' + lat + ',' + lng + '/';
-          window.open(url, '_blank');
-        },
-        title: address,
-      });
-    } else {
-      let map = new L.map('map').setView([lat, lng], zoom);
-      if (map_provider == 3 && api_key.length) {
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-          attribution:
-            'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-          tileSize: 512,
-          maxZoom: 18,
-          zoomOffset: -1,
-          id: 'mapbox/streets-v11',
-          accessToken: api_key,
-        }).addTo(map);
-      } else {
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 19,
-          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        }).addTo(map);
-      }
-      let marker = L.marker([lat, lng]).addTo(map);
-      let url = lat + ',' + lng + '#map=' + zoom + '/' + lat + '/' + lng + '&layers=N';
-      marker.bindPopup(
-        address +
-          '<p><a href="https://www.openstreetmap.org/directions?engine=osrm_car&route=' +
-          url +
-          '">Routing via OpenStreetMap</a></p>',
-      );
-    }
-  }
-}
-
-/* ---------------------------------------------------------------------------
  * GitHub API.
  * --------------------------------------------------------------------------- */
 
@@ -364,31 +176,13 @@ function toggleSearchDialog() {
     // Show search modal.
     $('body').addClass('searching');
     $('.search-results').css({opacity: 0, visibility: 'visible'}).animate({opacity: 1}, 200);
-    $('#search-query').focus();
+    let algoliaSearchBox = document.querySelector('.ais-SearchBox-input');
+    if (algoliaSearchBox) {
+      algoliaSearchBox.focus();
+    } else {
+      $('#search-query').focus();
+    }
   }
-}
-
-/* ---------------------------------------------------------------------------
- * Normalize Bootstrap Carousel Slide Heights.
- * --------------------------------------------------------------------------- */
-
-function normalizeCarouselSlideHeights() {
-  $('.carousel').each(function () {
-    // Get carousel slides.
-    let items = $('.carousel-item', this);
-    // Reset all slide heights.
-    items.css('min-height', 0);
-    // Normalize all slide heights.
-    let maxHeight = Math.max.apply(
-      null,
-      items
-        .map(function () {
-          return $(this).outerHeight();
-        })
-        .get(),
-    );
-    items.css('min-height', maxHeight + 'px');
-  });
 }
 
 /* ---------------------------------------------------------------------------
@@ -423,7 +217,10 @@ function getSiblings(elem) {
 
 $(document).ready(function () {
   fixHugoOutput();
-  fixMermaid();
+
+  // Render theme variation, including any HLJS and Mermaid themes.
+  let {isDarkTheme, themeMode} = initThemeVariation();
+  renderThemeVariation(isDarkTheme, themeMode, true);
 
   // Initialise code highlighting if enabled for this page.
   // Note: this block should be processed after the Mermaid code-->div conversion.
@@ -431,9 +228,12 @@ $(document).ready(function () {
     hljs.initHighlighting();
   }
 
-  // Render theme variation, including any HLJS and Mermaid themes.
-  let {isDarkTheme, themeMode} = initThemeVariation();
-  renderThemeVariation(isDarkTheme, themeMode, true);
+  // Scroll Book page's active menu sidebar link into view.
+  let child = document.querySelector('.docs-links .active');
+  let parent = document.querySelector('.docs-links');
+  if (child && parent) {
+    scrollParentToChild(parent, child);
+  }
 });
 
 /* ---------------------------------------------------------------------------
@@ -441,9 +241,37 @@ $(document).ready(function () {
  * --------------------------------------------------------------------------- */
 
 $(window).on('load', function () {
-  // Init Isotope Layout Engine for instances of the Portfolio widget.
+  // Re-initialize Scrollspy with dynamic navbar height offset.
+  fixScrollspy();
+
+  // Detect instances of the Portfolio widget.
   let isotopeInstances = document.querySelectorAll('.projects-container');
   let isotopeInstancesCount = isotopeInstances.length;
+
+  // Fix ScrollSpy highlighting previous Book page ToC link for some anchors.
+  // Check if isotopeInstancesCount>0 as that case performs its own scrollToAnchor.
+  if (window.location.hash && isotopeInstancesCount === 0) {
+    scrollToAnchor(decodeURIComponent(window.location.hash), 0);
+  }
+
+  // Scroll Book page's active ToC sidebar link into view.
+  // Action after calling scrollToAnchor to fix Scrollspy highlighting otherwise wrong link may have active class.
+  let child = document.querySelector('.docs-toc .nav-link.active');
+  let parent = document.querySelector('.docs-toc');
+  if (child && parent) {
+    scrollParentToChild(parent, child);
+  }
+
+  // Enable images to be zoomed.
+  let zoomOptions = {};
+  if (document.body.classList.contains('dark')) {
+    zoomOptions.background = 'rgba(0,0,0,0.9)';
+  } else {
+    zoomOptions.background = 'rgba(255,255,255,0.9)';
+  }
+  mediumZoom('[data-zoomable]', zoomOptions);
+
+  // Init Isotope Layout Engine for instances of the Portfolio widget.
   let isotopeCounter = 0;
   isotopeInstances.forEach(function (isotopeInstance, index) {
     console.debug(`Loading Isotope instance ${index}`);
@@ -522,50 +350,6 @@ $(window).on('load', function () {
     }
   }
 
-  // Enable publication filter for publication index page.
-  if ($('.pub-filters-select')) {
-    filter_publications();
-    // Useful for changing hash manually (e.g. in development):
-    // window.addEventListener('hashchange', filter_publications, false);
-  }
-
-  // Load citation modal on 'Cite' click.
-  $('.js-cite-modal').click(function (e) {
-    e.preventDefault();
-    let filename = $(this).attr('data-filename');
-    let modal = $('#modal');
-    modal.find('.modal-body code').load(filename, function (response, status, xhr) {
-      if (status == 'error') {
-        let msg = 'Error: ';
-        $('#modal-error').html(msg + xhr.status + ' ' + xhr.statusText);
-      } else {
-        $('.js-download-cite').attr('href', filename);
-      }
-    });
-    modal.modal('show');
-  });
-
-  // Copy citation text on 'Copy' click.
-  $('.js-copy-cite').click(function (e) {
-    e.preventDefault();
-    // Get selection.
-    let range = document.createRange();
-    let code_node = document.querySelector('#modal .modal-body');
-    range.selectNode(code_node);
-    window.getSelection().addRange(range);
-    try {
-      // Execute the copy command.
-      document.execCommand('copy');
-    } catch (e) {
-      console.log('Error: citation copy failed.');
-    }
-    // Remove selection.
-    window.getSelection().removeRange(range);
-  });
-
-  // Initialise Google Maps if necessary.
-  initMap();
-
   // Print latest version of GitHub projects.
   let githubReleaseSelector = '.js-github-release';
   if ($(githubReleaseSelector).length > 0) {
@@ -610,9 +394,6 @@ $(window).on('load', function () {
 
   // Init. author notes (tooltips).
   $('[data-toggle="tooltip"]').tooltip();
-
-  // Re-initialize Scrollspy with dynamic navbar height offset.
-  fixScrollspy();
 });
 
 // Theme chooser events.
@@ -641,11 +422,6 @@ const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 darkModeMediaQuery.addEventListener('change', (event) => {
   onMediaQueryListEvent(event);
 });
-
-// Normalize Bootstrap carousel slide heights for Slider widget instances.
-window.addEventListener('load', normalizeCarouselSlideHeights);
-window.addEventListener('resize', normalizeCarouselSlideHeights);
-window.addEventListener('orientationchange', normalizeCarouselSlideHeights);
 
 // Automatic main menu dropdowns on mouse over.
 $('body').on('mouseenter mouseleave', '.dropdown', function (e) {

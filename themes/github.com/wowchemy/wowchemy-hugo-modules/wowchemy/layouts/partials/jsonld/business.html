@@ -1,12 +1,13 @@
+{{- $sharing_image := resources.GetMatch (path.Join "media" "sharing.*") -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": {{site.Params.local_business_type | default site.Params.site_type}},
+  "@type": {{site.Params.marketing.seo.site_type | default site.Params.marketing.seo.site_type}},
   "@id": {{site.BaseURL}},
-  "name": {{site.Params.org_name | default site.Title}},
+  "name": {{site.Params.marketing.seo.org_name | default site.Title}},
   "logo": {{ partial "functions/get_logo_url" . }},
-  {{with site.Params.sharing_image}}"image": {{printf "%s/%s" ($.Scratch.Get "media_dir") . | absURL}},{{end}}
-  {{ if (eq site.Params.site_type "LocalBusiness") | and site.Params.coordinates }}
+  {{with $sharing_image}}"image": {{.Permalink}},{{end}}
+  {{ if (eq site.Params.marketing.seo.site_type "LocalBusiness") | and site.Params.coordinates }}
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": {{site.Params.coordinates.latitude}},
