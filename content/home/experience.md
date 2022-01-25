@@ -41,5 +41,12 @@ experience:
     company_url: ''
     location: Taoyuan, Taiwan
     date_start: '2021-02-01'
+    date_end: '2022-01-31'
+    
+  - title: Associate Professor
+    company: National Yang Ming Chiao Tung University
+    company_url: 'https://www.cs.nycu.edu.tw/'
+    location: Taoyuan, Taiwan
+    date_start: '2022-02-01'
     date_end: ''
 ---

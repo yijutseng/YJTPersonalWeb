@@ -17,9 +17,9 @@ interests:
 - Machine Learning
 
 organizations:
-- name: National Central University
-  url: https://im.mgt.ncu.edu.tw/
-role: Associate Professor of Information Management
+- name: National Yang Ming Chiao Tung University
+  url: https://www.cs.nycu.edu.tw/
+role: Associate Professor of Computer Science
 social:
 - icon: twitter
   icon_pack: fab
@@ -45,6 +45,6 @@ superuser: true
 title: 曾意儒 Yi-Ju Tseng
 ---
 
-Yi-Ju Tseng is an associate professor at National Central University [Digital Health Lab](https://dhlab-tseng.github.io/) with extensive experience in claims data and electronic medical records analysis and data mining analytics. Her work focuses on improving infection surveillance by using informatics techniques and applying data mining technology to clinical research.
+Yi-Ju Tseng is an associate professor at National Yang Ming Chiao Tung University (NYCU) [Digital Health Lab](https://dhlab-tseng.github.io/) with extensive experience in claims data and electronic medical records analysis and data mining analytics. Her work focuses on improving infection surveillance by using informatics techniques and applying data mining technology to clinical research.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/YJTseng_CV.pdf" "newtab" >}}CV{{< /staticref >}}.

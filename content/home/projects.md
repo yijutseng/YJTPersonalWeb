@@ -35,7 +35,8 @@ content:
     tag: big-data
   - name: Laboratory
     tag: Laboratory
-    
+  - name: Education
+    tag: edu   
 
 
 design:
